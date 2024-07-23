@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Playwrite+CU:wght@100..400&display=swap');
+
+/* Declaring root variables for quicker styling */
+
+:root {
+    /* Fonts */
+    --title: "Playwrite CU", sans-serif;
+    --main-font: "Nanum Gothic", sans-serif;
+
+    /* Colours */
+    --background: #C94427;
+    --off-white: #f6f6f6;
+    --grey: #B9B9B9;
+
+    /* Utilities */
+    --small-box-shadow: 1px -1px 7px #00000061;
+    --border: 1px solid #00000030;
+    
+}
+
+
+html,body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--main-font);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--title);
+}
+
+main {
+    flex: 1 0 auto;
+    background-color: var(--off-white);
+}
+
+/* Footer */
+footer {
+    flex-shrink: 0;
+}
+
+/* Header Styling */
+
+.navbar {
+    background-color: var(--off-white);
+    box-shadow: var(--small-box-shadow);
+    
+}
+
+a.nav-link{
+    color: var(--grey)
+}
+
+
