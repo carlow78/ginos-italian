@@ -11,6 +11,7 @@
     --background: #C94427;
     --off-white: #f6f6f6;
     --grey: #B9B9B9;
+    --header: #60935B;
 
     /* Utilities */
     --small-box-shadow: 1px -1px 7px #00000061;
@@ -34,21 +35,53 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 main {
+
     flex: 1 0 auto;
     background-color: var(--off-white);
 }
 
 /* Footer */
 footer {
+    
     flex-shrink: 0;
+    background-color: var(--background);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-top: var(--border);
 }
+
+.social-media-icon {
+    height: 2.5rem;
+    margin: 1.5rem;
+}
+
+.location-icon
+{
+    height: 1.3rem;
+    margin: 1.5rem;
+    align-self: baseline;
+    display: inline;
+    
+}
+
+.opening-icon{
+    height: 1.3rem;
+    margin: 1.5rem;
+    align-self: baseline;
+}
+
 
 /* Header Styling */
 
 .navbar {
-    background-color: var(--off-white);
-    box-shadow: var(--small-box-shadow);
     
+    box-shadow: var(--small-box-shadow);
+}
+
+.navbar-custom{
+    background-color: var(--header);
 }
 
 a.nav-link{
