@@ -80,12 +80,30 @@ footer {
     box-shadow: var(--small-box-shadow);
 }
 
-.navbar-custom{
+.navbar-brand {
+
+    font-family: var(--title);    
+}
+
+.navbar-custom {
     background-color: var(--header);
 }
 
-a.nav-link{
+a.nav-link {
     color: var(--grey)
 }
+
+.active{
+    border-bottom: 2px solid var(--blue);
+    font-weight: 500;
+}
+
+.form {
+    width: 100%;
+    margin: 3% auto;
+    box-shadow: var(--small-box-shadow);
+    border-radius: 5px;
+}
+
 
 
