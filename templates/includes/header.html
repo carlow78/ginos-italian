@@ -18,7 +18,7 @@
             <a class="nav-link" href="#">Menu</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Bookings</a>
+            <a class="nav-link {% if url_name == 'add_booking' %}active{% endif %}" href="{% url 'add_booking' %}">Bookings</a>
           </li>
           {% if request.user.is_authenticated %}
           <li class="nav-item">
