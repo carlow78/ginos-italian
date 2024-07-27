@@ -49,14 +49,15 @@ class Booking(models.Model):
     user = models.ForeignKey(User, related_name='booking_owner', on_delete=models.CASCADE)
 
     booking_name = models.CharField(max_length=40, null=False, blank=False)
-    telephone_number = models.IntegerField(null=False, blank=False, default='')
-    number_of_people = models.PositiveIntegerField(
-        blank=False,
+    telephone_number = models.CharField(max_length=15, null=False, blank=False, default='')
+    number_of_people = models.CharField(
+        blank=False, max_length=5,
+        choices=TABLE_AMOUNT_NUMBER,
         help_text='For bookings greater than 8 people, please call us at 01 2340000.'
     )
     date = models.DateField()   
     time = models.CharField(max_length=5, choices=TIME_SLOT, null=False, blank=False)
-    comments = models.CharField(max_length=200, null=True, blank=False)
+    comments = models.CharField(max_length=1000, null=True, blank=True)
     reservation_date = models.DateField(auto_now=True)
 
     class Meta:
