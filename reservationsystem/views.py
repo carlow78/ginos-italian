@@ -5,6 +5,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import reservationsystem
 from .forms import BookingForm
 
+
 class AddBooking(LoginRequiredMixin, CreateView):
 
     """
@@ -19,6 +20,7 @@ class AddBooking(LoginRequiredMixin, CreateView):
         form.instance.user = self.request.user
         return super(AddBooking, self).form_valid(form)
 
+    
 
 
 

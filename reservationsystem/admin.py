@@ -5,6 +5,7 @@ from .models import reservationsystem
 class ReservationSystemAdmin(admin.ModelAdmin):
     model = reservationsystem
     list_display = (
+        'date',
         'booking_name',
         'telephone_number',
     )

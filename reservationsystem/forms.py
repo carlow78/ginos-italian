@@ -2,10 +2,17 @@ from django import forms
 
 from .models import reservationsystem
 
+class DateInput(forms.DateInput):
+
+    input_type = 'date'
+
 class BookingForm(forms.ModelForm):
 
     class Meta:
         model = reservationsystem
+        widgets = {
+            'date': DateInput()
+        }
         fields = ['booking_name', 'telephone_number', 'number_of_people', 'date', 'time', 'comments']
 
     labels = {
@@ -17,3 +24,5 @@ class BookingForm(forms.ModelForm):
         'time': 'Time',
         'comments': 'Additional Comments',
     }
+
+    
