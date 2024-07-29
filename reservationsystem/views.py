@@ -2,7 +2,7 @@ from django.views.generic import CreateView
 
 from django.contrib.auth.mixins import LoginRequiredMixin
 
-from .models import Booking
+from .models import reservationsystem
 from .forms import BookingForm
 
 class AddBooking(LoginRequiredMixin, CreateView):
@@ -11,7 +11,7 @@ class AddBooking(LoginRequiredMixin, CreateView):
     Add booking view
     """
     template_name = 'bookings/add_booking.html'
-    model = Booking
+    model = reservationsystem
     form_class = BookingForm
     success_url = '/bookings/'
 

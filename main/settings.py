@@ -51,7 +51,7 @@ INSTALLED_APPS = [
     # Applications for website
 
     'home',
-    'booking',
+    'reservationsystem',
 
     # Other applications
 

@@ -40,7 +40,7 @@ TABLE_AMOUNT_NUMBER = (
 
 
 
-class Booking(models.Model):
+class reservationsystem(models.Model):
 
     """
     A model to create and manage bookings at restaurant

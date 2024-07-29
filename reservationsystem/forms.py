@@ -1,11 +1,11 @@
 from django import forms
 
-from .models import Booking
+from .models import reservationsystem
 
 class BookingForm(forms.ModelForm):
 
     class Meta:
-        model = Booking
+        model = reservationsystem
         fields = ['booking_name', 'telephone_number', 'number_of_people', 'date', 'time', 'comments']
 
     labels = {
