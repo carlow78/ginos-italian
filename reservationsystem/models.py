@@ -63,8 +63,7 @@ class reservationsystem (models.Model):
     class Meta:
         ordering = ['-reservation_date']
 
-    def __str__(self):
-        return f"Booking by {self.user.username} on {self.booking_date} at {self.booking_time}"
+    
     
 
     #def __str__(self):
