@@ -40,7 +40,7 @@ TABLE_AMOUNT_NUMBER = (
 
 
 
-class reservationsystem(models.Model):
+class reservationsystem (models.Model):
 
     """
     A model to create and manage bookings at restaurant
@@ -64,5 +64,9 @@ class reservationsystem(models.Model):
         ordering = ['-reservation_date']
 
     def __str__(self):
-        return str(self.booking_name)
+        return f"Booking by {self.user.username} on {self.booking_date} at {self.booking_time}"
+    
+
+    #def __str__(self):
+      #  return self.booking_name
 
