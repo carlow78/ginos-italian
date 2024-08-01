@@ -105,5 +105,19 @@ a.nav-link {
     border-radius: 5px;
 }
 
+.card {
+    height: 90%;
+    margin-top: 1rem;
+}
+
+.booking {
+
+    text-decoration: none;
+    color: var(--blue)
+}
+
+.bookings:hover{
+    cursor: pointer;
+}
 
 

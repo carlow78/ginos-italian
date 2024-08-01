@@ -39,7 +39,6 @@ TABLE_AMOUNT_NUMBER = (
 )
 
 
-
 class reservationsystem (models.Model):
 
     """
@@ -62,10 +61,4 @@ class reservationsystem (models.Model):
 
     class Meta:
         ordering = ['-reservation_date']
-
-    
-    
-
-    #def __str__(self):
-      #  return self.booking_name
 

@@ -1,10 +1,27 @@
 from django.shortcuts import render
-from django.views.generic import CreateView
+from django.views.generic import CreateView, DetailView
 
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views import generic
 from .models import reservationsystem
 from .forms import BookingForm
+
+class Reservation(generic.DetailView):
+    
+
+    template_name = 'bookings/view_reservation.html'
+
+    def get(self, request, *args, **kwargs):
+        if request.user.is_authenticated:
+            bookings = reservationsystem.objects.filter(user=request.user)
+
+            return render(request, 'bookings/view_reservation.html', {
+                'bookings': bookings
+            }
+            )
+        else:
+            return redirect('account_login')
+
 
 
 class AddBooking(LoginRequiredMixin, CreateView):
