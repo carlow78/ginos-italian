@@ -2,27 +2,35 @@
 
 {% block title %}Bookings{% endblock %}
 
-{%  block content %}
+{% block content %}
 
-<h1 class="text-center p-2">
-        
-    Bookings
+<h1 class="text-center p-2">Bookings</h1>
 
-    </h1>
+{% if bookings %}
 
-    {% for reservation in bookings %}
+    {% for booking in bookings %}
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card m-3" style="width: 18rem;">
 
-    <a href="" class="reservation" aria="Click to view {{reservation.title}}"></a>
-    <div class="card m-3" style="width: 18rem;">
-        <div class="card-body">
-          <h2 class="card-title">{{reservation.reservation_date}}</h2>
-          <p class="card-text">{{reservation.time}}</p>
+                    <a href="" class="reservation" aria-label="Click to view {{ booking.title }}"></a>
+                        <div class="card-body">
+                            <h5 class="card-title">Date: {{ booking.date }}</h5>
+                            <p class="card-text">Time: {{ booking.time }}</p>
+                            <p class="card-text">No. of people: {{ booking.number_of_people }}</p>
+
+                        </div>
+            </div>
+        </div> 
           
-        </div>
-      </div>
-    
-
     {% endfor %}
 
+    {% else %}
+
+    <p>You have no bookings.</p>
+
+    {% endif %}
+        
+    </div>              
 
 {% endblock %}

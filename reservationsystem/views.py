@@ -1,26 +1,10 @@
-from django.shortcuts import render
-from django.views.generic import CreateView, DetailView
-
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.shortcuts import render, redirect
+from django.views.generic import CreateView, ListView
 from django.views import generic
+from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import reservationsystem
 from .forms import BookingForm
 
-class Reservation(generic.DetailView):
-    
-
-    template_name = 'bookings/view_reservation.html'
-
-    def get(self, request, *args, **kwargs):
-        if request.user.is_authenticated:
-            bookings = reservationsystem.objects.filter(user=request.user)
-
-            return render(request, 'bookings/view_reservation.html', {
-                'bookings': bookings
-            }
-            )
-        else:
-            return redirect('account_login')
 
 
 
@@ -63,4 +47,18 @@ class BookingSuccess(generic.DetailView):
     def get(self, request):
         return render(request, 'booking_success.html')
 
+
+class UserBookings(LoginRequiredMixin, ListView):
+    """
+    View to display the bookings for the logged-in user.
+    """
+    model = reservationsystem
+    template_name = 'bookings/view_reservation.html'  # Template to display user bookings
+    context_object_name = 'bookings'  # Context variable to access bookings in the template
+
+    def get_queryset(self):
+        """
+        Override to filter bookings by the logged-in user.
+        """
+        return reservationsystem.objects.filter(user=self.request.user)
        
