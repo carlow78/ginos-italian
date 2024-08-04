@@ -105,20 +105,27 @@ a.nav-link {
     border-radius: 5px;
 }
 
+
 .card {
-    height: 90%;
-    margin-top: 1rem;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 30rem;
+    height: 40rem;
+    padding: 3rem;
+    border-radius: 8px;
+    transition: transform 0.2s;
+    box-shadow: 0 4px 8px rgba(--offwhite);
+    transition: transform 0.2s;
+    margin-left: 4rem; 
+    
 }
 
-.booking {
-
-    text-decoration: none;
-    color: var(--blue)
+.card:hover {
+    transform: scale(1.05); /* Enlarge booking on hover */
 }
-
-.bookings:hover{
-    cursor: pointer;
-}
-
 
 

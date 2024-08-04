@@ -1,36 +1,29 @@
 {% extends "base.html" %}
 
-{% block title %}Bookings{% endblock %}
+{% block title %}Your Bookings - Manage Your Reservations{% endblock %}
 
 {% block content %}
 
-<h1 class="text-center p-2">Bookings</h1>
-
+<h1 class="text-center p-2">Your Booking Reservations</h1>
+<br>
 {% if bookings %}
-
-    {% for booking in bookings %}
     <div class="row">
-        <div class="col-md-6 mb-4">
-            <div class="card m-3" style="width: 18rem;">
-
-                    <a href="" class="reservation" aria-label="Click to view {{ booking.title }}"></a>
-                        <div class="card-body">
-                            <h5 class="card-title">Date: {{ booking.date }}</h5>
-                            <p class="card-text">Time: {{ booking.time }}</p>
-                            <p class="card-text">No. of people: {{ booking.number_of_people }}</p>
-
-                        </div>
+        {% for booking in bookings %}
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Date: {{ booking.date }}</h5>
+                    <p class="card-text">Booking Name: {{ booking.booking_name }}</p>
+                    <p class="card-text">Time: {{ booking.time }}</p>
+                    <p class="card-text">No. of people: {{ booking.number_of_people }}</p>
+                </div>
             </div>
-        </div> 
-          
-    {% endfor %}
-
-    {% else %}
-
+        </div>
+        {% endfor %}
+    </div>
+{% else %}
     <p>You have no bookings.</p>
 
-    {% endif %}
-        
-    </div>              
+{% endif %}
 
 {% endblock %}

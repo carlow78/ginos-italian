@@ -4,6 +4,7 @@ from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import reservationsystem
 from .forms import BookingForm
+from django.contrib import messages
 
 
 
