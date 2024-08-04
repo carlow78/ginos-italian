@@ -13,11 +13,13 @@
             <div class="card h-100">
                 <div class="card-body">
                     <h5 class="card-title">Date: {{ booking.date }}</h5>
+                    <p class="card-text">Booking ID: {{ booking.id }}</p>
                     <p class="card-text">Booking Name: {{ booking.booking_name }}</p>
                     <p class="card-text">Time: {{ booking.time }}</p>
                     <p class="card-text">No. of people: {{ booking.number_of_people }}</p>
+
                 </div>
-                <a href="" class="btn btn-success">Edit Reservation</a>
+                <a href="{% url 'bookings:edit_reservation' booking.id %}" class="btn btn-success">Edit Reservation</a>
                 <br>
                 <a href="" class="btn btn-success">Delete Reservation</a>
             </div>

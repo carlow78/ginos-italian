@@ -19,11 +19,11 @@
           </li>
           
           <li class="nav-item">
-            <a class="nav-link {% if url_name == 'add_booking' %}active{% endif %}" href="{% url 'add_booking' %}">Bookings</a>
+            <a class="nav-link {% if url_name == 'add_booking' %}active{% endif %}" href="{% url 'bookings:add_booking' %}">Bookings</a>
           </li>
           {% if request.user.is_authenticated %}
           <li class="nav-item">
-            <a class="nav-link {% if url_name == 'view_reservation' %}active{% endif %}" href="{% url 'view_reservation' %}" href="">Manage Booking</a>
+            <a class="nav-link {% if url_name == 'view_reservation' %}active{% endif %}" href="{% url 'bookings:view_reservation' %}" href="">Manage Booking</a>
           </li>
           <li class="nav-item">
             <a class="nav-link {% if url_name == 'accounts_logout' %}active{% endif %}" href="/accounts/logout/">Logout</a>

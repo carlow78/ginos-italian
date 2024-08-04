@@ -1,12 +1,10 @@
-from django.shortcuts import render, redirect
-from django.views.generic import CreateView, ListView
+from django.shortcuts import render, redirect, get_object_or_404
+from django.views.generic import CreateView, ListView, UpdateView
 from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import reservationsystem
 from .forms import BookingForm
 from django.contrib import messages
-
-
 
 
 class AddBooking(LoginRequiredMixin, CreateView):
@@ -19,7 +17,7 @@ class AddBooking(LoginRequiredMixin, CreateView):
     form_class = BookingForm
     success_url = 'bookings/booking_success/'
 
-    def booking (self, request):
+    def add_booking (self, request):
         return render(request, 'add_booking.html')
 
     def post(self, request):
@@ -55,11 +53,38 @@ class UserBookings(LoginRequiredMixin, ListView):
     """
     model = reservationsystem
     template_name = 'bookings/view_reservation.html'  # Template to display user bookings
-    context_object_name = 'bookings'  # Context variable to access bookings in the template
+    context_object_name = 'bookings'  # Context variable to access bookings in the template folder
 
     def get_queryset(self):
         """
         Override to filter bookings by the logged-in user.
         """
         return reservationsystem.objects.filter(user=self.request.user)
+
+class EditBooking(LoginRequiredMixin, UpdateView):
+
+    template_name = 'bookings/edit_reservation.html'
+    model = reservationsystem
+    form_class = BookingForm
+    success_url = 'bookings/booking_success/'
+
+    def get_object(self, queryset=None):
+
+        booking_id = self.kwargs.get('pk')
+        return get_object_or_404(reservationsystem, pk=booking_id, user=self.request.user)
+
+    def form_valid(self, form):
+        form.save()
+        messages.success(self.request, 'Booking has been updated successfully.')
+        return redirect(self.success_url)
+
+    def form_invalid(self, form):
+        messages.error(self.request, 'Booking has not been updated. Please check inputted details')
+        return self.render_to_response({'form': form})
+
+    
+
+
+
+
        
