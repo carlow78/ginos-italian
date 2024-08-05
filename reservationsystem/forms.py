@@ -1,6 +1,6 @@
 from django import forms
 
-from .models import reservationsystem
+from .models import ReservationSystem
 from django.forms import DateInput, TimeInput
 from datetime import date
 
@@ -11,7 +11,7 @@ class DateInput(forms.DateInput):
 class BookingForm(forms.ModelForm):
 
     class Meta:
-        model = reservationsystem
+        model = ReservationSystem
         widgets = {
             'date': DateInput(),
         }

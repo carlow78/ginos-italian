@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import CreateView, ListView, UpdateView
 from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin
-from .models import reservationsystem
+from .models import ReservationSystem
 from .forms import BookingForm
 from django.contrib import messages
 
@@ -13,7 +13,7 @@ class AddBooking(LoginRequiredMixin, CreateView):
     Add booking view
     """
     template_name = 'bookings/add_booking.html'
-    model = reservationsystem
+    model = ReservationSystem
     form_class = BookingForm
     success_url = 'bookings/booking_success/'
 
@@ -51,7 +51,7 @@ class UserBookings(LoginRequiredMixin, ListView):
     """
     View to display the bookings for the logged-in user.
     """
-    model = reservationsystem
+    model = ReservationSystem
     template_name = 'bookings/view_reservation.html'  # Template to display user bookings
     context_object_name = 'bookings'  # Context variable to access bookings in the template folder
 
@@ -59,19 +59,19 @@ class UserBookings(LoginRequiredMixin, ListView):
         """
         Override to filter bookings by the logged-in user.
         """
-        return reservationsystem.objects.filter(user=self.request.user)
+        return ReservationSystem.objects.filter(user=self.request.user)
 
 class EditBooking(LoginRequiredMixin, UpdateView):
 
     template_name = 'bookings/edit_reservation.html'
-    model = reservationsystem
+    model = ReservationSystem
     form_class = BookingForm
-    success_url = 'bookings/booking_success/'
+    success_url = '../booking_success'
 
     def get_object(self, queryset=None):
 
         booking_id = self.kwargs.get('pk')
-        return get_object_or_404(reservationsystem, pk=booking_id, user=self.request.user)
+        return get_object_or_404(ReservationSystem, pk=booking_id, user=self.request.user)
 
     def form_valid(self, form):
         form.save()

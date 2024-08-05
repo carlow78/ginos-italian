@@ -1,9 +1,9 @@
 from django.contrib import admin
-from .models import reservationsystem
+from .models import ReservationSystem
 
-@admin.register(reservationsystem)
-class reservationrsystemAdmin(admin.ModelAdmin):
-    model = reservationsystem
+@admin.register(ReservationSystem)
+class ReservationSystemAdmin(admin.ModelAdmin):
+    model = ReservationSystem
     list_display = (
         'date',
         'booking_name',
