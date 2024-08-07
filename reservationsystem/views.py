@@ -39,7 +39,7 @@ class AddBooking(LoginRequiredMixin, CreateView):
 
 class BookingSuccess(generic.DetailView):
     """
-    Renders the Thank You page in the browser
+    Renders the Booking Success page in the browser
     """
     template_name = 'booking_success.html'
 
@@ -61,12 +61,13 @@ class UserBookings(LoginRequiredMixin, ListView):
         """
         return ReservationSystem.objects.filter(user=self.request.user)
 
-class EditBooking(LoginRequiredMixin, UpdateView):
+class EditBooking(LoginRequiredMixin, generic.UpdateView):
 
     template_name = 'bookings/edit_reservation.html'
     model = ReservationSystem
     form_class = BookingForm
-    success_url = '../booking_success'
+    success_url = '../view_reservation'
+    
 
     def get_object(self, queryset=None):
 
@@ -74,17 +75,16 @@ class EditBooking(LoginRequiredMixin, UpdateView):
         return get_object_or_404(ReservationSystem, pk=booking_id, user=self.request.user)
 
     def form_valid(self, form):
+        
         form.save()
-        messages.success(self.request, 'Booking has been updated successfully.')
         return redirect(self.success_url)
 
     def form_invalid(self, form):
-        messages.error(self.request, 'Booking has not been updated. Please check inputted details')
-        return self.render_to_response({'form': form})
+        
+        return render(self.request, self.template_name, {'form': form})
+
+
 
     
-
-
-
 
        
