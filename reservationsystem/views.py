@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import CreateView, ListView, UpdateView
 from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.urls import reverse_lazy
 from .models import ReservationSystem
 from .forms import BookingForm
 from django.contrib import messages
@@ -83,6 +84,15 @@ class EditBooking(LoginRequiredMixin, generic.UpdateView):
         
         return render(self.request, self.template_name, {'form': form})
 
+
+class DeleteBooking(LoginRequiredMixin, generic.DeleteView):
+    model = ReservationSystem
+    template_name = 'bookings/delete_reservation.html'
+    success_url = '/reservationsystem/view_reservation'
+
+    def get_object(self, queryset=None):
+        booking_id = self.kwargs.get('pk')
+        return get_object_or_404(ReservationSystem, pk=booking_id, user=self.request.user)
 
 
     
