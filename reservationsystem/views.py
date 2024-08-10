@@ -7,6 +7,13 @@ from .models import ReservationSystem
 from .forms import BookingForm
 from django.contrib import messages
 
+class Home(generic.DetailView):
+    """
+    Renders the Index page in the browser
+    """
+    def index(request):
+        return render(request, 'index.html')
+
 
 class AddBooking(LoginRequiredMixin, CreateView):
 
