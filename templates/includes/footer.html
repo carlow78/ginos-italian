@@ -1,28 +1,59 @@
 {% load static %}
 
-<footer>
+<!--Thanks to - https://www.geeksforgeeks.org/how-to-create-a-simple-footer-using-bootstrap-5/-->
 
-    <!--Restaurant Location -->
-    <a href="" target="_blank" rel="noopener" arial-label="Google Map - Opens in a new tab" >
-        <img src="{% static 'icons/google-map-icon.svg' %}" alt="Google Map Icon" class="location-icon">123 Main Street, Carlow, Co Carlow R93 P4D4, Ireland
-    </a>
-
-    <!--Social media icons -->
-    <a href="" target="_blank" rel="noopener" arial-label="Instagram - Opens in a new tab">
-        <img src="{% static 'icons/black-instagram-icon.svg' %}" alt="Instagram Icon" class="social-media-icon">
-    </a>
-
-    <a href="" target="_blank" rel="noopener" arial-label="Facebook - in a new tab">
-        <img src="{% static 'icons/thumbs-up-line-icon.svg' %}" alt="Facebook Icon" class="social-media-icon">
-    </a>
-
-    <a href="" target="_blank" rel="noopener" arial-label="Tripadvisor - Opens in a new tab">
-        <img src="{% static 'icons/tripadvisor-icon.svg' %}" alt="Instagram Icon" class="social-media-icon">
-    </a>
-
-    <!-- Opening Times -->
-    <a href="" target="_blank" rel="noopener" arial-label="Clock icon. Opening Times - Wednesday to Sunday 5pm to 11pm Closed Monday and Tuesday">
-        <img src="{% static 'icons/clock-icon.svg' %}" alt="Clock Icon" class="opening-icon">Opening Times - Wednesday to Sunday 12pm to 9pm Closed - Monday and Tuesday
-    </a>
-
+<footer class="footer p-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h2>Gino's Italian</h2>
+            </div>
+            <div class="col-md-3">
+                <h5>About Us</h5>
+                <p>
+                    Established in 2023. We are a family run business who are passionate about Italian cuisine.
+                    Led by our Head Chef Antonio we only used the freshest and finest local ingredients.
+                </p>
+            </div>
+            <div class="col-md-3">
+                <h5>Contact Us</h5>
+                <ul class="list-unstyled">
+                    <li>Email: info@ginos-italiancw@gmail.com</li>
+                    <li>Phone: +35359356789</li>
+                    <li>Address: 123 Main Street, Carlow, Co Carlow R93 P4D4, Ireland</li>
+                    <li>Opening Times: 12pm to 9pm</li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h5>Follow Us</h5>
+                <ul class="list-inline footer-links">
+                    <li class="list-inline-item">
+                      <a href="#">
+                            <i class="fab fa-facebook"></i>
+                      </a>
+                      </li>
+                    <li class="list-inline-item">
+                      <a href="#">
+                            <i class="fab fa-twitter"></i>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#">
+                            <i class="fab fa-instagram"></i>
+                      </a>
+                    </li>
+                   
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-6">
+                <p>&copy; 2024 JLDesigns All rights reserved.</p>
+            </div>
+            
+            </div>
+        </div>
+    </div>
 </footer>
+
