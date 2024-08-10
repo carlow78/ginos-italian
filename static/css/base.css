@@ -41,7 +41,7 @@ main {
 }
 
 /* Footer */
-.footer-container {
+.footer {
     
     flex-shrink: 0;
     background-color: var(--background);
@@ -49,32 +49,8 @@ main {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    color:var(--off-white);
     border-top: var(--border);
-}
-
-.social-media-icon {
-    height: 2.5rem; 
-    align-items: center;
-}
-
-.location-icon, .opening-icon {
-   
-    align-items: flex-start;
-    height: 10rem;
-}
-
-
-.location-icon a, .opening-icon a {
-    text-decoration: none; 
-    align-items: flex-end;
-    color: inherit; 
-}
-
-/* Hover effect */
-
-.social-media-icon:hover, .location-icon:hover, .opening-icon:hover {
-    transform: scale(1.1); 
-    transition: transform 0.2s ease; 
 }
 
 /* Header Styling */
