@@ -62,7 +62,8 @@ footer {
     height: 1.3rem;
     margin: 1.5rem;
     align-self: baseline;
-    display: inline;
+    display: flex;
+    justify-content: flex-start;
     
 }
 
