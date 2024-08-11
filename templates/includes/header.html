@@ -15,7 +15,7 @@
             <a class="nav-link {% if url_name == 'home' %}active{% endif %}" aria-current="page" href="{% url 'home' %}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Menu</a>
+            <a class="nav-link {% if url_name == 'menu' %}active{% endif %}" aria-current="page" href="{% url 'bookings:menu' %}">Menu</a>
           </li>
           
           <li class="nav-item">

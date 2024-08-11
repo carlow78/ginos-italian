@@ -9,10 +9,17 @@ from django.contrib import messages
 
 class Home(generic.DetailView):
     """
-    Renders the Index page in the browser
+    Displays the Index page in the browser
     """
     def index(request):
         return render(request, 'index.html')
+
+class Menu(generic.DetailView):
+    """
+     Displays the Menu page in the browser
+    """
+    def get(self, request):
+        return render(request, 'bookings/menu.html')
 
 
 class AddBooking(LoginRequiredMixin, CreateView):
