@@ -20,7 +20,7 @@ class Menu(generic.DetailView):
     """
     def get(self, request):
         return render(request, 'bookings/menu.html')
-
+        success_url = 'bookings/documents/ginos-italian-menu/'
 
 class AddBooking(LoginRequiredMixin, CreateView):
 
