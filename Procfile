@@ -1,1 +1,1 @@
-web: gunicorn ginos-italian.wsgi
+web: gunicorn reservationsystem.wsgi
