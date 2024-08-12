@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Playwrite+CU:wght@100..400&display=swap');
+
+/* Declaring root variables for quicker styling */
+
+:root {
+    /* Fonts */
+    --title: "Playwrite CU", sans-serif;
+    --main-font: "Nanum Gothic", sans-serif;
+
+    /* Colours */
+    --background: #C94427;
+    --off-white: #f6f6f6;
+    --grey: #B9B9B9;
+    --header: #60935B;
+
+    /* Utilities */
+    --small-box-shadow: 1px -1px 7px #00000061;
+    --border: 1px solid #00000030;
+    
+}
+
+
+html,body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--main-font);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--title);
+}
+
+main {
+
+    flex: 1 0 auto;
+    background-color: var(--off-white);
+}
+
+/* Hero image adapted using https://github.com/Martiless/nondairy-godmother/blob/main/static/css/style.css */
+
+
+#hero-outer {
+    height: 680px;
+    width: 100%;
+    overflow: hidden; 
+    position: relative;
+
+}
+
+#hero-image {
+    min-height: 100%;
+    width: 100%;
+    background: url('https://res.cloudinary.com/dbssvuxgq/image/upload/v1723318538/dark-surface-with-fresh-products-space-messages_tnrgz7.jpg') no-repeat 95% 50%;
+    background-size: cover;
+    
+
+
+    animation-name: hero-zoom;
+    animation-duration: 5s;
+    animation-fill-mode:forwards;
+}
+
+@keyframes hero-zoom {
+    from{
+        transform: scale(1.5);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+#cover-text {
+    font-size: 150%;
+    font-family: var(--main-font), sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+
+    width: auto;
+    height: 160px;
+
+    padding-top: 40px;
+    padding-left: 10px;
+    background-color: var(--header);
+
+    bottom: 325px;
+    right: 500px;
+
+    position: sticky
+}
+
+#cover-text, #cover-text h2 {
+    font-family: var(--main-font);
+    line-height: normal;
+}
+
+
+#cover-text, #cover-text h3 {
+    font-size: medium;
+    font-family: var(--main-font);
+    color: var(--off-white);
+    text-align: center;
+}
+
+#cover-text, #cover-text h4 {
+    font-size: smaller;
+    font-style: italic;
+    font-family: var(--main-font);
+    color: var(--off-white);
+    text-align: center;
+}
+
+/* Menu Image */
+
+#menu-outer {
+    height: 100%;
+    width: 100%;
+    overflow: hidden; 
+    
+
+}
+
+
+#menu-image {
+    min-height: 100%;
+    width: 100%;
+    background: url('https://res.cloudinary.com/dbssvuxgq/image/upload/c_thumb,w_200,g_face/v1723386940/ginos-italian-menu_o4vohy.png') no-repeat center center;
+    
+
+}
+
+/* Footer */
+.footer {
+    
+    flex-shrink: 0;
+    background-color: var(--background);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color:var(--off-white);
+    border-top: var(--border);
+}
+
+/* Header Styling */
+
+.navbar {
+    
+    box-shadow: var(--small-box-shadow);
+    
+
+}
+
+.navbar-brand {
+
+    font-family: var(--title);
+    color:var(--off-white);
+    font-size: x-large;
+        
+}
+
+.navbar-custom {
+    background-color: var(--header);
+}
+
+a.nav-link {
+    color: var(--grey)
+}
+
+.active{
+    border-bottom: 2px solid var(--blue);
+    font-weight: 500;
+}
+
+.form {
+    width: 100%;
+    margin: 3% auto;
+    box-shadow: var(--small-box-shadow);
+    border-radius: 5px;
+}
+
+
+.card {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 30rem;
+    height: 40rem;
+    padding: 3rem;
+    border-radius: 8px;
+    transition: transform 0.2s;
+    box-shadow: 0 4px 8px rgba(--offwhite);
+    transition: transform 0.2s;
+    margin-left: 4rem; 
+    
+}
+
+.card:hover {
+    transform: scale(1.05); /* Enlarge booking on hover */
+}
+
+
