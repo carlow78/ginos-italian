@@ -45,12 +45,7 @@ class AddBooking(LoginRequiredMixin, CreateView):
             booking.save()
             return render(request, 'bookings/booking_success.html')
         else:
-            messages.error(request, 'Booking not completed, please check your booking information')
-
-        return render(request, 'bookings.html',{
-                'form': form
-                }
-                )    
+            messages.error(request, 'Booking not completed, please check your booking information')  
 
 
 class BookingSuccess(generic.DetailView):
@@ -68,8 +63,8 @@ class UserBookings(LoginRequiredMixin, ListView):
     View to display the bookings for the logged-in user.
     """
     model = ReservationSystem
-    template_name = 'bookings/view_reservation.html'  # Template to display user bookings
-    context_object_name = 'bookings'  # Context variable to access bookings in the template folder
+    template_name = 'bookings/view_reservation.html' 
+    context_object_name = 'bookings'  
 
     def get_queryset(self):
         """
