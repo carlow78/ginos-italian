@@ -116,7 +116,6 @@ class DeleteBooking(LoginRequiredMixin, generic.DeleteView):
     "view_reservation" which shows their other reservation(s) (if any).
     """
 
-
     model = ReservationSystem
     template_name = 'bookings/delete_reservation.html'
     success_url = '/reservationsystem/view_reservation'

@@ -1,10 +1,10 @@
 from django.test import TestCase, Client
 from django.urls import reverse
 from reservationsystem.models import ReservationSystem
-from  .views import EditBooking
+from  .views import EditBooking, DeleteBooking
 from django.contrib.auth.models import User
 
-class TestAddBooking(TestCase):
+class TestBooking(TestCase):
     def setUp(self):
         # Create a user for authentication
         self.user = User.objects.create_user(
@@ -58,6 +58,29 @@ class TestAddBooking(TestCase):
             booking_id = self.kwargs.get('pk')
             response = self.client.post(reverse('bookings:delete_reservation', kwargs={'pk': booking_id}), follow=True)
 
+            # Check that the reservation was successfully deleted    
             self.assertEqual(response.status_code, 200)  
 
-   
+class TestView(TestCase):
+
+
+    def test_home_view_get(self):
+       
+        response = self.client.get('/')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'home/index.html', 'base.html')
+
+    def test_menu_view_get(self):
+       
+        response = self.client.get(reverse('bookings:menu'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'bookings/menu.html', 'base.html')
+
+    def test_addbooking_view_get(self):
+
+        self.client.login(username='Tom', password='MagnumPI')
+        response = self.client.get(reverse('bookings:add_booking'))
+        self.assertEqual(response.status_code, 302)
+    
+
+

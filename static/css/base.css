@@ -54,7 +54,7 @@ main {
 #hero-image {
     min-height: 100%;
     width: 100%;
-    background: url('https://res.cloudinary.com/dbssvuxgq/image/upload/v1723318538/dark-surface-with-fresh-products-space-messages_tnrgz7.jpg') no-repeat 95% 50%;
+    background: url('https://res.cloudinary.com/dbssvuxgq/image/upload/v1723650144/dark-surface-with-fresh-products-space-messages_jxiuov.webp') no-repeat 95% 50%;
     background-size: cover;
     
 
@@ -119,20 +119,91 @@ main {
     height: 100%;
     width: 100%;
     overflow: hidden; 
-    
+ 
 
 }
-
 
 #menu-image {
     min-height: 100%;
-    width: 100%;
-    background: url('https://res.cloudinary.com/dbssvuxgq/image/upload/c_thumb,w_200,g_face/v1723386940/ginos-italian-menu_o4vohy.png') no-repeat center center;
+    min-width: 100%;
+    background: url('https://res.cloudinary.com/dbssvuxgq/image/upload/v1723659279/pexels-klaus-nielsen-6287554-small4_aglhcx.jpg') repeat center;
+    background-size:auto;
     
-
 }
 
+#menu-text {
+    font-size: 150%;
+    font-family: var(--main-font), sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+
+    width: auto;
+    height: 160px;
+
+    padding-top: 40px;
+    padding-left: 10px;
+    text-align: center;
+    background-color: var(--header);
+
+    bottom: 325px;
+    right: 500px;
+
+    position: sticky;
+}
+
+#menu-text, #menu-text h2 {
+    font-family: var(--main-font);
+    line-height: normal;
+}
+
+/* Booking Success Image */
+
+#success-outer {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    
+}
+
+
+#success-image {
+    min-height: 100%;
+    min-width: 100%;
+    background: url('https://res.cloudinary.com/dbssvuxgq/image/upload/v1723656381/pizzas-around-pasta-small_scfx8b.webp') no-repeat center center;
+    background-size: cover;
+    
+}
+
+#success-text {
+    font-size: 150%;
+    font-family: var(--main-font), sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+
+    width: auto;
+    height: 160px;
+
+    padding-top: 40px;
+    padding-left: 10px;
+    text-align: center;
+    background-color: var(--header);
+
+    bottom: 325px;
+    right: 500px;
+
+    position: sticky;
+}
+
+#success-text, #success-text h2, h3 {
+    font-family: var(--main-font);
+    
+    line-height: normal;
+}
+
+
+
 /* Footer */
+
 .footer {
     
     flex-shrink: 0;
@@ -181,7 +252,6 @@ a.nav-link {
     box-shadow: var(--small-box-shadow);
     border-radius: 5px;
 }
-
 
 .card {
     
