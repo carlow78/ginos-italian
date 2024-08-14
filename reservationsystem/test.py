@@ -36,7 +36,8 @@ class TestAddBooking(TestCase):
         self.kwargs = {'pk': 1}
 
     def test_edit_reservation(self):
-        # Test edit a reservation
+        # Test edit a reservation. Changing no of people from 4 to 6
+
             self.client.login(username='Tom', password='MagnumPI')
             booking_id = self.kwargs.get('pk')
             response = self.client.post(reverse('bookings:edit_reservation', kwargs={'pk': booking_id}))
@@ -48,8 +49,15 @@ class TestAddBooking(TestCase):
             'time': '19:00',
             'comments': 'None',
         }
+            # Check that the reservation was successfully edited
+            self.assertEqual(response.status_code, 302)
 
-            self.assertEqual(response.status_code, 302)  
-            
+    def test_delete_reservation(self):
+            # Test to delete a reservation
+            self.client.login(username='Tom', password='MagnumPI')
+            booking_id = self.kwargs.get('pk')
+            response = self.client.post(reverse('bookings:delete_reservation', kwargs={'pk': booking_id}), follow=True)
+
+            self.assertEqual(response.status_code, 200)  
 
    

@@ -4,9 +4,6 @@ from django.contrib.auth.models import User
 
 TIME_SLOT = (
 
-    """
-    Display the allowed times drop-down menu
-    """
 
 	('12:00', '12:00'),
     ('12:30', '12:30'),
@@ -32,9 +29,6 @@ TIME_SLOT = (
 
 TABLE_AMOUNT_NUMBER = (
 
-    """
-    Display table booking drop-down 1 - 8
-    """
 
     ('1', '1'),
     ('2', '2'),
@@ -53,8 +47,6 @@ class ReservationSystem (models.Model):
     """
     A model to create and manage bookings at the restaurant.
     All fields are required (null=False) except for comments (null True)
-
-
     """
 
     user = models.ForeignKey(User, related_name='booking_owner', on_delete=models.CASCADE)
