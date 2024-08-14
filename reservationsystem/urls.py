@@ -4,8 +4,15 @@ from django.conf import settings
 from .views import AddBooking, UserBookings, EditBooking, DeleteBooking, Menu
 from . import views 
 
-app_name = 'bookings'
+"""
+Template folder name
+"""
+app_name = 'bookings' 
 
+
+"""
+The below are the urls for the reservationsystem app
+"""
 
 urlpatterns = [
     

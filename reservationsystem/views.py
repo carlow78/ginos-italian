@@ -21,12 +21,15 @@ class Menu(generic.DetailView):
     def get(self, request):
         return render(request, 'bookings/menu.html')
     
-    
 
 class AddBooking(LoginRequiredMixin, CreateView):
 
     """
-    Add booking view
+    Add booking view. Allows the user to add a booking,
+    All fields must be filled in except for comment field.
+    When they have successfully added a booking they are
+    brought to a successful booking page "booking_success"
+
     """
     template_name = 'bookings/add_booking.html'
     model = ReservationSystem
@@ -74,6 +77,14 @@ class UserBookings(LoginRequiredMixin, ListView):
 
 class EditBooking(LoginRequiredMixin, generic.UpdateView):
 
+    """
+    Allows the logged in user (LoginRequiredMixin) to edit their 
+    reservation(s).
+    Using the booking_id as the primary key.
+    When they have changed their reservation they are brought back
+    to their list of reservation page "view_reservation".
+    """
+
     template_name = 'bookings/edit_reservation.html'
     model = ReservationSystem
     form_class = BookingForm
@@ -96,6 +107,16 @@ class EditBooking(LoginRequiredMixin, generic.UpdateView):
 
 
 class DeleteBooking(LoginRequiredMixin, generic.DeleteView):
+    """
+    Allows the logged in user to delete a reservation.
+    When they click on the "delete reservation" button. 
+    They will be brought to "delete reservation" where they need to click on the
+     "Delete Confirm" button - deleting booking from the db.
+    The user is then returned to their list of reservation(s)
+    "view_reservation" which shows their other reservation(s) (if any).
+    """
+
+
     model = ReservationSystem
     template_name = 'bookings/delete_reservation.html'
     success_url = '/reservationsystem/view_reservation'
