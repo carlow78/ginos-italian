@@ -1,11 +1,12 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib import messages
 from django.views.generic import CreateView, ListView, UpdateView
 from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 from .models import ReservationSystem
 from .forms import BookingForm
-from django.contrib import messages
+
 
 class Home(generic.DetailView):
     """
@@ -46,6 +47,7 @@ class AddBooking(LoginRequiredMixin, CreateView):
             booking = form.save(commit=False)
             booking.user = request.user
             booking.save()
+            messages.success(request, "Booking added successfully.")
             return render(request, 'bookings/booking_success.html')
         else:
             return render(request, 'bookings/add_booking.html', {'form': form})  # Return the form with errors
@@ -100,6 +102,7 @@ class EditBooking(LoginRequiredMixin, generic.UpdateView):
     def form_valid(self, form):
         
         form.save()
+        messages.success(self.request, "Booking edited successfully.")
         return redirect(self.success_url)
 
     def form_invalid(self, form):
@@ -111,18 +114,18 @@ class DeleteBooking(LoginRequiredMixin, generic.DeleteView):
     """
     Allows the logged in user to delete a reservation.
     When they click on the "delete reservation" button. 
-    They will be brought to "delete reservation" where they need to click on the
-     "Delete Confirm" button - deleting booking from the db.
-    The user is then returned to their list of reservation(s)
-    "view_reservation" which shows their other reservation(s) (if any).
+    The user is returned to the home page.
+    The reservation is removed from the database.
+
     """
 
     model = ReservationSystem
-    template_name = 'bookings/delete_reservation.html'
-    success_url = '/reservationsystem/view_reservation'
+    template_name = 'home/index.html'
+    success_url = '/'
 
     def get_object(self, queryset=None):
         booking_id = self.kwargs.get('pk')
+        messages.success(self.request, "Reservation Deleted.")
         return get_object_or_404(ReservationSystem, pk=booking_id, user=self.request.user)
 
 

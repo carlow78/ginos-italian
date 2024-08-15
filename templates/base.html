@@ -27,6 +27,25 @@
 
     {% include 'includes/header.html' %}
 
+    <!--Code taken for CI walkthrough project-->
+    <div>
+        <div class="message-container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    {% for message in messages %}
+                    <div class="alert {{ message.tags }} alert-success alert-dismissible fade show" role="alert" aria-live="polite" id="msg-{{ forloop.counter }}">
+                        {{ message | safe }}
+                        <button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <main>
         
         {% block content %}
@@ -36,6 +55,22 @@
     </main>
 
     {% include 'includes/footer.html' %}
+
+    <script>
+        // Function to fade out alerts after 2 seconds
+        document.addEventListener("DOMContentLoaded", function() {
+            const alerts = document.querySelectorAll('.alert');
+            
+            alerts.forEach(alert => {
+                setTimeout(() => {
+                    alert.classList.add('fade-out');
+                    setTimeout(() => {
+                        alert.remove();
+                    }, 500); 
+                }, 2000); 
+            });
+        });
+    </script>    
     
 </body>
 

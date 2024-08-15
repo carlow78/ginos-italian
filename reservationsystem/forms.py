@@ -5,7 +5,18 @@ from django.core.exceptions import ValidationError
 from datetime import date
 from django.forms import Textarea
 
+
 class BookingForm(forms.ModelForm):
+
+    """
+    The restaurant's reservation form. All fields are required except for comments.
+    Telephone number has to be at least 10 (and max 15) digits only.
+    Past dates are not excepted.
+    Drop-down boxes for No. of people and Booking Time.
+    User will be prompted with red error messages for invalid input ie: past date.
+    Thanks to - https://stackoverflow.com/questions/12278753/clean-method-in-model-and-field-validation
+
+    """
     class Meta:
         model = ReservationSystem
         fields = ['booking_name', 'telephone_number', 'number_of_people', 'date', 'time', 'comments']

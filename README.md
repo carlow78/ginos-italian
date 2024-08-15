@@ -1,12 +1,12 @@
-# Non-dairy Godmother: 
+# Gino's Italian: 
 
-This website is designed for a fictional vegan restaurant based in Cork, Ireland. 
+This website is designed for a fictional Italian restaurant based in Carlow, Ireland. 
 
-This website has been created as the Fourth Milestone project for Code Institute's Full Stack Software Development Diploma. It was built using a Full-Stack Toolkit. GitPod was used for writing the code for this website, as well as committing and pushing to GitHub. GitHub was then used to store the project after it had been pushed from GitPod. Once all the code had been written, Heroku was then used to deploy the website. 
+The website has been created as the Fourth Milestone project for Code Institute's Diploma in Full Stack Software Development (E-commerce Applications).  Gitpod was used to write code and to add, commit and push changes/updates to the project's Github repository. Heroku was used to deploy the website.
 
 
-### View the live website [here](https://non-dairy-godmother.herokuapp.com/)
-![Live Website](/static/images/main_area.png)
+### View the live website [here](https://ginos-italian-9732d83f0d42.herokuapp.com/)
+![Live Website](/static/images/main-page.jpg)
 
 ***
 ## Table of content: 
@@ -37,67 +37,27 @@ This website has been created as the Fourth Milestone project for Code Institute
  
 ## Site Goals:
 
-The goals for this site are as follows:
+The primary goals for this site are as follows:
 * Allow users to make a booking at the restaurant
 * Allow users to edit or cancel their booking
-* Allow users to sign up for a monthly newsletter
-* Allow the restaurant owner to collect a database of customers who have booked with them 
-* Allow the restaurant owner to collect a database for marketing purposes in the form of a monthly newsletter
+* Allow users to view the menu of whats on offer at the restaurant with prices etc.
+
 
 ## UX:
 
 ### User stories:
 To demonstrate the Agile approach that was used for this project, GitHub issues were used and a Kanban board was used to record all the user stories. 
-The user stories were categorised using different labels, i.e MO - *Must have*, SO - *Should Have* and CO - *Could have*.
 Each story was then moved from 'To Do' to 'In Progress' to  'Done' as the project progressed, with CO stories moved to a future feature board. 
 
-#### Project Progression: 
-<details>
-<summary>Progression One</summary>
-
-![Progression One](/static/images/progess_one.png)
-</details>
-
-<details>
-<summary>Progression Two</summary>
-
-![Progression Two](/static/images/progess_two.png)
-</details>
-
-<details>
-<summary>Progression Three</summary>
-
-![Progression Three](/static/images/progress_three.png)
-</details>
-
-<details>
-<summary>Progression Four</summary>
-
-![Progression Four](/static/images/progess_four.png)
-</details>
-
-<details>
-<summary>Progression Five</summary>
-
-![Progression Five](/static/images/progess_five.png)
-</details>
-
-<details>
-<summary>Progression Six</summary>
-
-![Progression Six](/static/images/progess_six.png)
-</details>
 
 ***
 
 #### New User:  
 * As a new user, I want to register so I can make a booking 
-* As a new user, I want to book a table at Non-Dairy Godmother restaurant
+* As a new user, I want to book a table at the restaurant
 * As a new user, I want to pick the time, date and number of people for the booking
-* As a new user, I also want the option to pick the occasion and area I would like to site
 * As a new user, I want to be able to view menus
 * As a new user, I want to be able to log in to edit or cancel my booking 
-* As a new user, I want to be able to sign up for the restaurant's monthly newsletter
 
 #### Returning User:
 * As a returning user, I want to log in to my account
