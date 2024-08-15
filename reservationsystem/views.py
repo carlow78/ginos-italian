@@ -48,7 +48,8 @@ class AddBooking(LoginRequiredMixin, CreateView):
             booking.save()
             return render(request, 'bookings/booking_success.html')
         else:
-            messages.error(request, 'Booking not completed, please check your booking information')  
+            return render(request, 'bookings/add_booking.html', {'form': form})  # Return the form with errors
+        return render(request, 'add_booking.html')
 
 
 class BookingSuccess(generic.DetailView):
