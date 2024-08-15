@@ -3,6 +3,7 @@ from .models import ReservationSystem
 from django.forms.widgets import DateInput, TimeInput
 from django.core.exceptions import ValidationError
 from datetime import date
+from django.forms import Textarea
 
 class BookingForm(forms.ModelForm):
     class Meta:
@@ -10,7 +11,9 @@ class BookingForm(forms.ModelForm):
         fields = ['booking_name', 'telephone_number', 'number_of_people', 'date', 'time', 'comments']
         widgets = {
             'date': DateInput(attrs={'type': 'date'}),
+            'comments': forms.Textarea(attrs={'rows': 5, 'cols': 40}),
         }
+
         labels = {
             'booking_name': 'Booking Name',
             'telephone_number': 'Telephone Number',
@@ -19,12 +22,17 @@ class BookingForm(forms.ModelForm):
             'time': 'Time',
             'comments': 'Additional Comments',
         }
+        help_texts = {
+            'telephone_number': 'Please enter your phone number including area code (if applicable).',
+            'comments': 'Any special requests/notes ? (this field can be left blank).',
+        }
 
     def clean_booking_name(self):
         booking_name = self.cleaned_data.get('booking_name')
-
         if not booking_name:
             raise ValidationError("Booking name is required.")
+        if booking_name.isdigit():
+            raise ValidationError("Booking name cannot be an integer.")
         return booking_name
 
     def clean_telephone_number(self):
@@ -45,9 +53,5 @@ class BookingForm(forms.ModelForm):
             raise ValidationError("The reservation date cannot be in the past.")
         return reservation_date
 
-
-    def clean_comments(self):
-        comments = self.cleaned_data.get('comments')
-        return comments
 
     

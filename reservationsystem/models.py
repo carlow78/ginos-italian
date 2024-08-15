@@ -56,7 +56,7 @@ class ReservationSystem (models.Model):
     number_of_people = models.CharField(
         blank=False, max_length=5,
         choices=TABLE_AMOUNT_NUMBER,
-        help_text='For bookings greater than 8 people, please call us at 01 2340000.'
+        help_text='For bookings greater than 8 people, please call us at 01 23400000.'
     )
     date = models.DateField()   
     time = models.CharField(max_length=5, choices=TIME_SLOT, null=False, blank=False)
@@ -69,4 +69,3 @@ class ReservationSystem (models.Model):
         Order by reservation_date in admin 
         """
         ordering = ['-reservation_date']
-
