@@ -46,7 +46,7 @@ The primary goals for this site are as follows:
 ## UX:
 
 ### User stories:
-To demonstrate the Agile approach that was used for this project, GitHub issues were used and a Kanban board was used to record all the user stories. 
+Github was the Agile approach that was used for this project, GitHub issues were used and a Kanban board was used to record all the user stories. 
 Each story was then moved from 'To Do' to 'In Progress' to  'Done' as the project progressed, with CO stories moved to a future feature board. 
 
 
