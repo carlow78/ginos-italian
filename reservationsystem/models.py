@@ -61,7 +61,7 @@ class ReservationSystem (models.Model):
     number_of_people = models.CharField(
         blank=False, max_length=5,
         choices=TABLE_AMOUNT_NUMBER,
-        help_text='For bookings greater than 8 people, please call us at 01 23400000.'
+        help_text='For bookings greater than 8 people, please call us at 0599123456.'
     )
     date = models.DateField()   
     time = models.CharField(max_length=5, choices=TIME_SLOT, null=False, blank=False)
