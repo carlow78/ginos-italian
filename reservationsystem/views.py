@@ -30,6 +30,8 @@ class AddBooking(LoginRequiredMixin, CreateView):
     All fields must be filled in except for comment field.
     When they have successfully added a booking they are
     brought to a successful booking page "booking_success"
+    Thanks to https://github.com/Martiless/nondairy-godmother
+    and https://www.youtube.com/watch?v=sBjbty691eI&list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy
 
     """
     template_name = 'bookings/add_booking.html'

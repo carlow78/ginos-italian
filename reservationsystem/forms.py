@@ -14,7 +14,7 @@ class BookingForm(forms.ModelForm):
     Past dates are not excepted.
     Drop-down boxes for No. of people and Booking Time.
     User will be prompted with red error messages for invalid input ie: past date.
-    Thanks to - https://stackoverflow.com/questions/12278753/clean-method-in-model-and-field-validation
+    Validation thanks to - https://stackoverflow.com/questions/12278753/clean-method-in-model-and-field-validation
 
     """
     class Meta:

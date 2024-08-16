@@ -22,9 +22,9 @@
 
     <title>Gino's Italian {% block title %}{% endblock %}</title>
 
-    <!--Favicon plate of pasta -->
+    <!--Favicon plate of pasta-->
 
-    <link rel="icon" sizes="180x180" href="{% static 'icons/apple-touch-icon.png' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'icons/apple-touch-icon.png' %}">
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'icons/favicon-32x32.png' %}">
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon-16x16.png' %}">
 
@@ -33,7 +33,7 @@
 
     {% include 'includes/header.html' %}
 
-    <!--Code taken for CI walkthrough project-->
+    <!--Code from https://github.com/Martiless/nondairy-godmother -->
     <div>
         <div class="message-container">
             <div class="row">
@@ -61,7 +61,8 @@
     </main>
 
     {% include 'includes/footer.html' %}
-
+    
+    <!--Thanks to https://stackoverflow.com/questions/23101966/bootstrap-alert-auto-close -->
     <script>
         // Function to fade out alerts after 2 seconds
         document.addEventListener("DOMContentLoaded", function() {
