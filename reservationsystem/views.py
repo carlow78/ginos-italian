@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
-from django.views.generic import CreateView, ListView, UpdateView
+from django.views.generic import CreateView, ListView, UpdateView, DeleteView
 from django.views import generic
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.urls import reverse_lazy
 from .models import ReservationSystem
 from .forms import BookingForm
@@ -111,26 +111,28 @@ class EditBooking(LoginRequiredMixin, generic.UpdateView):
         
         return render(self.request, self.template_name, {'form': form})
 
-
-class DeleteBooking(LoginRequiredMixin, generic.DeleteView):
+class DeleteBooking(LoginRequiredMixin, DeleteView):
     """
-    Allows the logged in user to delete a reservation.
-    When they click on the "delete reservation" button. 
-    The user is returned to the home page.
-    The reservation is removed from the database.
-
+    Allows the logged-in user to delete their reservation(s).
+    Using the booking_id as the primary key.
+    After deletion, the user is redirected to their list of reservations.
     """
 
-    model = ReservationSystem
-    template_name = 'home/index.html'
-    success_url = '/'
+    def get_object(self, pk):
+        """Retrieve the reservation object for the logged-in user."""
+        return get_object_or_404(ReservationSystem, pk=pk, user=self.request.user)
 
-    def get_object(self, queryset=None):
-        booking_id = self.kwargs.get('pk')
-        messages.success(self.request, "Reservation Deleted.")
-        return get_object_or_404(ReservationSystem, pk=booking_id, user=self.request.user)
+    def post(self, request, pk):
+        """Handle the POST request to delete the reservation."""
+        booking = self.get_object(pk)
+        booking.delete()
+        messages.success(request, "Booking deleted successfully.")
+        return redirect(('/'))
 
-
+    def get(self, request, pk):
+        """Render a confirmation page before deletion."""
+        booking = self.get_object(pk)
+        return render(request, 'bookings/delete_reservation.html', {'booking': booking})
     
 
        
