@@ -2,6 +2,11 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
+"""
+Thanks to https://github.com/Martiless/nondairy-godmother
+and https://www.youtube.com/watch?v=sBjbty691eI&list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy
+"""
+
 TIME_SLOT = (
 
 
