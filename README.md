@@ -6,15 +6,14 @@ The website has been created as the Fourth Milestone project for Code Institute'
 
 
 ### View the live website [here](https://ginos-italian-9732d83f0d42.herokuapp.com/)
-![Live Website](/static/images/main-page.jpg)
+![Live Website](/static/images/readme/main-page.jpg)
 
 ***
 ## Table of content: 
  1. [Site Goals](#Site-Goals)
- 1. [UX](#UX)
+ 1. [User Experience UX](#user-experience-ux)
       1. [User Stories](#User-Stories)
-      1. [Development Planes](#Development-Planes)
-            * [Strategy](#Strategy)
+      1. [Development Plan](#Development-Plan)
             * [Scope](#Scope)
             * [Structure](#Structure)
             * [Skeleton](#Skeleton)
@@ -43,11 +42,10 @@ The primary goals for this site are as follows:
 * Allow users to view the menu of whats on offer at the restaurant with prices etc.
 
 
-## UX:
+## User Experience UX:
 
 ### User stories:
-Github was the Agile approach that was used for this project, GitHub issues were used and a Kanban board was used to record all the user stories. 
-Each story was then moved from 'To Do' to 'In Progress' to  'Done' as the project progressed, with CO stories moved to a future feature board. 
+Github was used to define an Agile approach for this project, A User Story template was created for the project. GitHub issues was then used to create the user stories using the newly created custom template for this project. A Kanban board was used to record all the user stories. All issues were assigned to me as the website developer. All issues were moved from 'To Do' to 'In Progress' to  'Done' as the project progressed.
 
 
 ***
@@ -56,54 +54,35 @@ Each story was then moved from 'To Do' to 'In Progress' to  'Done' as the projec
 * As a new user, I want to register so I can make a booking 
 * As a new user, I want to book a table at the restaurant
 * As a new user, I want to pick the time, date and number of people for the booking
-* As a new user, I want to be able to view menus
+* As a new user, I want to be able to view menu
 * As a new user, I want to be able to log in to edit or cancel my booking 
 
 #### Returning User:
 * As a returning user, I want to log in to my account
-* As a returning user, I want to book a table at Non-Dairy Godmother restaurant
-* As a returning user, I want to view my bookings 
+* As a returning user, I want to book a table at the restaurant
+* As a returning user, I want to view all my bookings
 * As a returning user, I want to be able to edit or cancel my bookings 
-* As a returning user, I want to see if the menus have been updated
+* As a returning user, I want to see if the menu have been updated
 
-## Development Planes:
-To create a website that is comprehensive and informative for a user, as a developer you need to look at all aspects of the website and how someone who visits your website will use it. You have to consider all the user stories that have been outlined in the above sections.  
+## Development Plan:
+Developers must consider every aspect of the website and the way users will interact with it in order to produce user-friendly, comprehensive websites. Every user story that has been described in the sections above must be taken into account.  
 
-## Strategy
-The strategy principal looks at user needs, as well product/service objectives. This website's target audience was broken down into three categories:
-### Roles: 
-* New User
-* Existing User  
 
-### Demographic:
-* People aged between 16 - 40 years
-* Working individuals with disposable income 
-
-### Psychographic:
-#### Lifestyle:
-* People who follow a Vegan diet
-* People who like eating out
-
-#### Values:
-* Reducing the number of animal products being used
-* Environmentally Conscious
-
-#### The website needs to allow users to:  
+#### The primary goals for a user to achieve using this website is to
 * Make a booking
 * Log into their account 
 * Edit a booking
 * Cancel a booking 
-* Sign up for a newsletter
-
 
 #### The website needs to allow the restaurant owner to:  
-* Collect information about their customer
+
 * Track bookings that are coming into the restaurant 
 * Manage the number of people per table via the booking model    
 
 ## Scope:  
 
 With the structure in place, it was then time to move onto the scope plane. This was all about developing website requirements based on the goals set out in the strategy plane. These requirements are broken down into two categories. 
+
 ### Content Requirements:
 1. The user will be looking for:
       * Location of the restaurant
@@ -114,20 +93,18 @@ With the structure in place, it was then time to move onto the scope plane. This
 1. The user will be able to:
       * Book a table at a certain time and date
       * Choose the number of people for the booking 
-      * Choose the occasion and their prefered location in the restaurant
       * Edit bookings 
       * Cancel bookings 
-      * Sign up for a newsletter
 
 ***
 
 ## Structure:
 
-The information above was then used to create a structure for the website. Below is a site map showing how users can navigate the website intuitively 
+The information above was then used to create a structure for the website. Below is a site map showing how users can navigate the website. Sitemap created using [Gloomaps](https://www.gloomaps.com/).
 <details>
 <summary>Sitemap</summary>
 
-![Sitemap](/static/images/site_map.png)
+![Sitemap](/static/images/readme/site-structure.jpg)
 </details>
 
 
