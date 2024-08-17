@@ -1,21 +1,20 @@
-## Testing of Non-Dairy Godmother website: 
+## Testing of Ginos Italian website: 
 
 ## Table of content: 
  1. [Manual Testing](#manual-test)
     1. [General](#General)
     1. [Navbar and Footer Links](#navbar-and-footer-links)
-    1. [Menus Page](#menus-page)
+    1. [Menu Page](#menu-page)
     1. [Register](#register)
     1. [Login](#log-in)
     1. [Add Booking](#add-booking)
-    1. [My Bookings](#my-bookings)
-    1. [Edit Bookings](#edit-bookings)
-    1. [Thank You](#thank-you-page)
+    1. [Booking Success](#booking-success)
+    1. [Manage Booking](#manage-booking)
+    1. [Delete Reservation](#delete-reservation)
+    1. [Other User Delete/Edit Attempt](#other-user-deleteedit-attempt)
  1. [Automated Testing](#automated-test)
- 1. [User Feedback](#user-feedback)
-    1. [Home Page Image](#home-page-image)
-    1. [Spacing](#spacing-on-the-pages)
-    1. [Message Time Out](#time-out-of-message)
+ 1. [JavaScript Testing](#javascript-testing)
+ 
 
 
 ## Manual Test:
@@ -76,7 +75,7 @@ The below screenshot displays what happens when the user clicks on "Add Booking"
 
 ![Add Booking](/static/images/testing/testing-add-booking.jpg)
 
-### Booking Success Page
+### Booking Success
 
 When the user submits valid information they are brought to the Booking Success page which thanks them for the booking. A brief message appears for 2 seconds "Booking added successfully." and then disappears. This reservation is now in the database and can be viewed by the user when they click on the "Manage Booking" header link.
 
@@ -112,6 +111,8 @@ When the test user created returned to their "Manage Booking" page there was no 
 
 ***
 
+## Other User Delete/Edit Attempt
+
 Test user (username = tester) trying to alter test user (TomDunne's) reservation
 
 For this scenario I created another reservation using the test user (TomDunne's) account and using the url I tried to edit and delete booking id 59. Thankfully has hoped this was not possible and tester was given a 404 page not found error.
@@ -139,7 +140,13 @@ When I performed the automated tests I used the default sqllite database as reco
 
 ***
 
+## JavaScript Test
+
+Very little Javascript was written personally for this project the only JavaScript deployed was to automatically hide the bootstrap user messages after 2 seconds before this the user had to click on the x button to close the message which is bad User UX. This script is located at the bottom of the base.html web page. Other messages include when the user add/edit/delete reservations.
+
+![JavaScript Test](/static/images/testing/test-message-without-autohide-script.jpg)
 
 
-[Back to Top of Testing](#manual-testing-of-non-dairy-godmother-website)     
+[Back to Top of Testing](#testing-of-ginos-italian-website)     
 [Back to README](/README.md)
+

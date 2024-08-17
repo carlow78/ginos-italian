@@ -62,8 +62,8 @@
 
     {% include 'includes/footer.html' %}
     
-    <!--Thanks to https://stackoverflow.com/questions/23101966/bootstrap-alert-auto-close -->
-    <script>
+     <!--Thanks to https://stackoverflow.com/questions/23101966/bootstrap-alert-auto-close -->
+     <script>
         // Function to fade out alerts after 2 seconds
         document.addEventListener("DOMContentLoaded", function() {
             const alerts = document.querySelectorAll('.alert');
@@ -74,10 +74,10 @@
                     setTimeout(() => {
                         alert.remove();
                     }, 500); 
-                }, 2000); 
+                }, 2000); // Remove message after 2 seconds
             });
         });
-    </script>    
+    </script>  
     
 </body>
 
