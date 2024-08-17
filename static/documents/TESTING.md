@@ -100,12 +100,28 @@ Test performed was to reduce amount of people from 5 to 4 people. Click on "Upda
 
 ![Manage Booking(After)](/static/images/testing/testing-manage-booking-after.jpg)
 
-* When a user clicks on the 'Delete Reservation' button they are redirected to the Delete reservation to confirm the deletion and when then they do they are returned to the home page, where they get a message pop up stating ***"Booking deleted successfully."***
+## Delete Reservation
 
+* When a user clicks on the 'Delete Reservation' button they are redirected to the Delete reservation page to 'confirm deletion' and when then they do they are returned to the home page, where they get a message pop up stating ***"Booking deleted successfully."***
 
+![Delete Reservation](/static/images/testing/testing-delete-reservation.jpg)
+
+When the test user created returned to their "Manage Booking" page there was no bookings after they deleted their only existing reservation.
+
+![Return to Manage Booking](/static/images/testing/testing-deletion-result.jpg)
 
 ***
 
+Test user (username = tester) trying to alter test user (TomDunne's) reservation
+
+For this scenario I created another reservation using the test user (TomDunne's) account and using the url I tried to edit and delete booking id 59. Thankfully has hoped this was not possible and tester was given a 404 page not found error.
+
+Booking ID = 59
+
+
+![Non-user deletion attempt](/static/images/testing/non-user-edit-delete.jpg)
+
+Ideally I would prefer the edit id number to not be visible (primarily for security reason) I did try to implement other solutions (slug and uuid) but unfortunately I had to revert back to the working model. 
 
 
 ## Automated Test:
