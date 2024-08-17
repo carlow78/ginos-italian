@@ -6,25 +6,28 @@ from datetime import date
 from django.forms import Textarea
 
 
+"""
+Thanks to
+https://www.youtube.com/watch?v=sBjbty691eI&list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy
+"""
 
-"""
-Thanks to https://www.youtube.com/watch?v=sBjbty691eI&list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy
-"""
 
 class BookingForm(forms.ModelForm):
 
     """
-    The restaurant's reservation form. All fields are required except for comments.
-    Telephone number has to be at least 10 (and max 15) digits only.
+    The restaurant's reservation form. All fields are required except for
+    comments. Telephone number has to be at least 10 (and max 15) digits only.
     Past dates are not excepted.
     Drop-down boxes for No. of people and Booking Time.
-    User will be prompted with red error messages for invalid input ie: past date.
-    Validation thanks to - https://stackoverflow.com/questions/12278753/clean-method-in-model-and-field-validation
+    User will be prompted with red error messages for invalid input ie:
+    past date. Validation thanks to -
+    https://stackoverflow.com/questions/12278753/clean-method-in-model-and-field-validation
 
     """
     class Meta:
         model = ReservationSystem
-        fields = ['booking_name', 'telephone_number', 'number_of_people', 'date', 'time', 'comments']
+        fields = ['booking_name', 'telephone_number', 'number_of_people',
+                  'date', 'time', 'comments']
         widgets = {
             'date': DateInput(attrs={'type': 'date'}),
             'comments': forms.Textarea(attrs={'rows': 5, 'cols': 40}),
@@ -39,8 +42,10 @@ class BookingForm(forms.ModelForm):
             'comments': 'Additional Comments',
         }
         help_texts = {
-            'telephone_number': 'Please enter your phone number including area code (if applicable).',
-            'comments': 'Any special requests/notes ? (this field can be left blank).',
+            'telephone_number': 'Please enter your phone number including'
+            ' area code (if applicable).',
+            'comments': 'Any special requests/notes ?'
+            ' (this field can be left blank).',
         }
 
     def clean_booking_name(self):
@@ -58,7 +63,8 @@ class BookingForm(forms.ModelForm):
         if not telephone_number.isdigit():
             raise ValidationError("Telephone number must contain only digits.")
         if len(telephone_number) < 10:
-            raise ValidationError("Telephone number must be at least 10 digits long.")
+            raise ValidationError("Telephone number must be at least"
+                                  " 10 digits long.")
         return telephone_number
 
     def clean_date(self):
@@ -66,8 +72,6 @@ class BookingForm(forms.ModelForm):
         if reservation_date is None:
             raise ValidationError("Date is required.")
         if reservation_date < date.today():
-            raise ValidationError("The reservation date cannot be in the past.")
+            raise ValidationError("The reservation date cannot be"
+                                  " in the past.")
         return reservation_date
-
-
-    

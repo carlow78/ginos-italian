@@ -154,7 +154,7 @@ The navigation bar consisted of links to a Make a Reservation page, a Login page
 
 ![Opening Hours & Social Media](/static/images/readme/gino-footer.jpg)
 </details> 
-Each page contains a footer section which contains a About Us paragraph, a Contact Us section with details about to get in touch with the restaurant and finally a Social Media with links to the restaurant social media sources.
+Each page contains a footer section which contains a About Us paragraph, a Contact Us section with details about how to get in touch with the restaurant and finally a Social Media with links to the restaurant social media sources (all these links open in a new tab - better UX design).
 
 &nbsp;
 
@@ -187,7 +187,7 @@ Next there is the *Make a Reservation* page. Which has all the previously mentio
 <details>
 <summary>Booking Form:</summary>
 
-![Menus](/static/images/readme/ginos-add-reservation.jpg)
+![Add-Reservation](/static/images/readme/ginos-add-reservation.jpg)
 </details> 
 Once a user has either logged into their account or created an account they will be able to view the booking form. 
 
@@ -270,44 +270,15 @@ Testing information can be viewed [here](/static/documents/TESTING.md)
 ***
 
 ## Bugs:
-1. The styling of the base page was not consistent across all pages on the site.
-      * I had not included "{% load static %}" at the beginning of my base.html page. Once this was edited, all pages loaded correctly. 
-1. The booking page was not loading, the below error message was coming up:
-      * After reading through the yellow error page, it showed elements of the booking model didn't exist. I realised that I had changed elements of the model without making any migrations.
+
+1. The styling of the edit resercation page was not consistent with the other pages. 
+      * I had forgotten to include "{% load static %}" at the beginning of my html page once this was added, the page loaded correctly. 
 <details>
-<summary>Booking Page Error</summary>
 
-![Booking Page Error](/static/images/booking_page_error.png)
-</details>
 
-1. Bookings appeared to be completed on the site but nothing was happening in the backend. 
-      * One reason this wasn't working was that I had manually entered the booking form into the bookings.html file as opposed to entering it using Django's built-in features.
-      * Once this was fixed I then had to add the POST function to the bookings view. 
-
-1. When trying to add specific users the booking form loaded but throw up a ProgrammingError when the user clicked on "Book Now"
-      * I had to do a bit of troubleshooting to solve this one. After spending a bit of time researching and chatting with other students on Slack it was discovered that my view for the booking form was written for the older version of the booking model and had to be updated to include the user request.
-      * After making these changes a user was now able to complete the booking and was redirected to the "Thank you" page.
-<details>
-<summary>ID Error</summary>
-
-![ID Error](/static/images/id_error.png)
-</details>
-
-1. After correcting the above ID error it caused another ProgrammingError when I logged into the Django admin page and clicked on the bookings tab.
-      * After countless attempts to solve this error but debugging, troubleshooting and reaching out to various programming communities (including Slack) I had to eventually contact the CI tutors. 
-      * There were several attempts to find the issue in the code, looking at the 'list_display' in the admin.py file and correcting errors in the models.py file neither of which solved the problem.
-      * We cleared the previous migrations to create the admin page again but the tutor noticed that the Heroku Postgres database was still connected. 
-      * I reset the database from inside Heroku and performed the migrations, this corrected the issue 
-<details>
-<summary>Admin Page Error</summary>
 
 ![Admin Page Error](/static/images/admin_page_error.png)
 </details>
-
-1. Bookings were not showing up on the "My Bookings" page.
-      * In my view, I had created a variable called my_bookings and then used this as the context in my view.
-      * In the my_bookings.html page, I had created a for loop to iterate through the bookings of an authorised user and display them for editing or cancelling. However, in creating this for loop I had used the wrong variable. The context in my views.py file was "my_bookings" whereas in the loop I had used "for booking in bookings" Therefore there was a context/template mismatch. 
-      * Once I removed the line of code in the view.py file which included the "my_bookings" variable as it was irrelevent and changed the context to bookings (as this was the query that was filtering the user's bookings) the bookings appear on the "My Bookings" page of the site. 
 
 1. CSS was not appearing when the site was deployed.
       * When I delpoyed the site to Heroku, the site would be built but the CSS was not appearing.
@@ -319,19 +290,6 @@ Testing information can be viewed [here](/static/documents/TESTING.md)
             * I then had to change the DEBUG back to FALSE before removing DISABLE COLLECTSTATIC from the config vars and commit and push the changes. 
             * This then allowed Heroku to Collectstatic and added all the static files to Cloudinary
       * All the CSS then worked perfectly on the site 
-1. Server 500 error coming up when trying to register a user.
-      * When trying to register a new user to the site and an email address was provided a server 500 error was coming up
-      * After chatting with the tutors at CI it was discovered that if an email was provided the site send a verification email with a link, but as I don't have emails set up it was causing an issue.
-      * To ensure email wasn't required to verify a login the following code was put into the settings.py file:
-            * ***ACCOUNT_AUTHENTICATION_METHOD = 'username'***
-            * ***ACCOUNT_EMAIL_VERIFICATION = 'none'*** 
-      * Setting the ACCOUNT_EMAIL_VERIFICATION to none means that the user does not need to click on a link to confirm login. 
-
-1. PFD files not working on live site:
-      * This was because of the Cloudinary account I have. When I tried to add a PDF file through Cloudinary I got the following error message:  
-      ***Delivery of PDF assets is not currently permitted for this account.*** 
-      * My solution to this problem was to create a seperate folder within my Django app called "documents" which housed all the relevant documentations for this project including all PDF files neede for the website and md files. 
-
 
 1. During the testing stage, it was discovered that both the Newsletter form and the Book a Table form had elements of it that were not showing up as being a required field. After a quick search, I found that I needed to provide each field with a handle that checks if the field is required. I also added labels for each of these required fields, along with placeholders.  
 
@@ -340,7 +298,7 @@ Testing information can be viewed [here](/static/documents/TESTING.md)
 [Back to top](#Ginos-Italian) 
 
 ## Technologies Used:
-For this project, the following technologies were used.  
+For this project, the following technologies were used:  
 
 ### Languages:
 * HTML
@@ -355,7 +313,7 @@ For this project, the following technologies were used.
 * Bootstrap
 
 #### Google Font
-* Google Font was used to import the chosen font for this project Lora.
+* Google Font was used to import the two chosen fonts for this project for the headers and title: "Playwrite CU", and for the main-font: "Nanum Gothic", sans-serif was used as the backup for both fonts.
 
 #### Font Awesome
 * Font Awesome was used on each page of the website to provide icons for UX purposes.  
@@ -375,7 +333,7 @@ For this project, the following technologies were used.
 #### Balsamiq 
 * Balsamiq was used to draw initial Wireframes for this project.
 
-#### Figma
+#### 
 * Figma was used during the structure phase of this project. It was used to create a sitemap of the website. 
 
 #### Google Development Tools

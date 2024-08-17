@@ -166,6 +166,13 @@ main {
     line-height: normal;
 }
 
+.errorlist {
+    color: red; 
+}
+.error {
+       color: red; 
+   }
+
 /* Booking Success Image */
 
 #success-outer {

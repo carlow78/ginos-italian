@@ -127,7 +127,7 @@ Ideally I would prefer the edit id number to not be visible (primarily for secur
 
 ## Automated Test:
 Automated testing was attempted using the test.py file located in reservationsystem app. The goal was to test the functionality of using the main views of the reservation app. Adding a user, then adding, editing, and deleting a reservation by the created test user. 
-To view the automated testing attempt please go to [test.py](reservationsystem/test.py)
+To view the automated testing attempt please go to [test.py](/reservationsystem/test.py)
 For testing the view I created 6 automated tests. The main test point was to try and to test the CRUD functionality. 
 
 The main issue I encountered was "AssertionError: 200 != 302" for 3 of my test cases when I changed 200 (status ok code) for 302 (temporary redirect code) as recommended in the terminal feedback. All tests passed. Unfortunately, due time constraints I had to rely on manual testing (which I was going to do anyway) I intend to looking into this issue at a later date to understand why 302 is working and 200 (the code I hoped and expected to see).

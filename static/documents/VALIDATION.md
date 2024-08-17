@@ -2,56 +2,43 @@
 
 ## HTML Validation:
 
+The following were validated once content was inserted into s emmet boiler HTML template.
+
 ### Home page: 
-![Home Page Validation](/static/images/home_page_validator.png)
+
+![Home Page Validation](/static/images/validation/validation-index-html.jpg)
 
 ***
 
 ### Menu page: 
-![Menu Page Validation](/static/images/menu_page_validator.png)
+![Menu Page Validation](/static/images/validation/validation-menu-html.jpg)
 
 ***
 
-### Book A Table page: 
-![Book A Table Validation](/static/images/book_a_table_validator.png)
+### Make a Reservation page: 
+![Make a Validation](/static/images/validation/validation-make-reservation.jpg)
 
 ***
 
-### My Bookings page: 
-![My Bookings Validation](/static/images/my_bookings_validator.png)
+Remaining HTML files were not tested for the following reason small size i.e Delete Reservation and Edit Reservation due to its similiarity to Add Booking already tested.
 
 ***
 
-### Edit Bookings page: 
-![Edit Bookings Validation](/static/images/edit_bookings_validator.png)
+## Python Validation: 
+
+### Model: 
+![Models Validation](/static/images/validation/validation-model-py.jpg)
 
 ***
 
-### Newsletter page: 
-![Newsletter Page Validation](/static/images/newsletter_validator.png)
+### Form: 
+![Forms Validation](/static/images/validation/validation-form-py.jpg)
 
 ***
 
-## Pyhton Validation: 
-
-### Models: 
-![Models Validation](/static/images/models_validator.png)
-
+### View: 
+![Views Validation](/static/images/validation/validation-view-py.jpg)
 ***
 
-### Forms: 
-![Forms Validation](/static/images/forms_validator.png)
-
-***
-
-### Views: 
-![Views Validation](/static/images/views_validator.png)
-
-***
-
-### Test Views:
-![Test Views Validation](/static/images/test_views_validator.png)
-
-***
 
 Back to [README](/README.md)
