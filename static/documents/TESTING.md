@@ -7,7 +7,7 @@
     1. [Menus Page](#menus-page)
     1. [Register](#register)
     1. [Login](#log-in)
-    1. [Book A Table](#book-a-table)
+    1. [Add Booking](#add-booking)
     1. [My Bookings](#my-bookings)
     1. [Edit Bookings](#edit-bookings)
     1. [Thank You](#thank-you-page)
@@ -56,7 +56,7 @@ The Log in page is a simple test, there was just two elements on the page that n
 * Clicking on the 'Log In' button redirects the user back to the home page.
 
 
-### Make a Reservation:
+### Add Booking:
 
 Contains 6 elements on it
 1. Booking Name
@@ -70,55 +70,60 @@ Contains 6 elements on it
 These elements need to be filled out before the user can make a booking, the checks for this page are as follows:
 * Try clicking on the 'Submit' button without entering any details in the log in form, this will cause an error message to appear staing ***"Please fill out this field"***. This message will appear each time the user tries to submit the form without filling out any of the fields in the form. 
 * Selecting a date is done using the calender widget. Click on the calendar icon on the right and select a date. If the user chooses past date they will receive an error message - "The reservation date cannot be in the past."
-* Number of People, Time, Table and Occasion are all selected using the dropdown menu, this is done but clicking on the arrow and choosing the option that best suits the booking. If the user attempts to make a booking without making one of these choices they will recieved the following message ***"Please select an item in the list"***
+* Number of People and Time, are all selected using the dropdown menu, this is done but clicking on the arrow and choosing the option that best suits the booking. If the user attempts to make a booking without making one of these choices they will receive the following message ***"Please select an item in the list"***
+
+The below screenshot displays what happens when the user clicks on "Add Booking" button with invalid input. The form will only be submitted when all valid information is entered by the user.
+
+![Add Booking](/static/images/testing/testing-add-booking.jpg)
+
+### Booking Success Page
+
+When the user submits valid information they are brought to the Booking Success page which thanks them for the booking. A brief message appears for 2 seconds "Booking added successfully." and then disappears. This reservation is now in the database and can be viewed by the user when they click on the "Manage Booking" header link.
+
+![Booking Success](/static/images/testing/testing-booking-success.jpg)
 
 
-### My Bookings:
-The My Bookings page is a page where all the bookings from the user will appear in the order of most recent bookings. From there the user has the option to Edit a booking or to cancel a booking.   
-*Checks for Edit bookings can be found [here](#edit-bookings)*   
+### Manage Booking:
+The Manage Booking page is a page where all the bookings from the user will appear in the order of their most recent bookings. From there the user has the option to Edit a reservation or to delete a reservation.   
 The checks for My Bookings are as follows:
-* When a user clicks on the 'edit' button they are redirected to the Edit Bookings page, where they can make adjustments to their booking.
-* When a user clicks on the 'cancel' button they are redirected to the Home page, where they get a message pop up stating ***"Your booking has been cancelled"***
+* When a user clicks on the 'Edit Reservation' button they are redirected to the Edit Booking page, where they can make adjustments to their booking.
+
+Test performed was to reduce amount of people from 5 to 4 people. Click on "Update Booking" button and to confirm that booking was updated to 4 people on the "Manage Booking" webpage.
+
+<b>Before</b>
+
+![Manage Booking(Before)](/static/images/testing/testing-manage-booking.jpg)
+
+<b>After</b>
+
+![Edit Booking](/static/images/testing/testing-edit-reservation.jpg)
+
+![Manage Booking(After)](/static/images/testing/testing-manage-booking-after.jpg)
+
+* When a user clicks on the 'Delete Reservation' button they are redirected to the Delete reservation to confirm the deletion and when then they do they are returned to the home page, where they get a message pop up stating ***"Booking deleted successfully."***
 
 
-### Edit Bookings:
-The Edit Bookings page gives the user the opportunity to make changes to any aspects of their bookings. To test this page the following checks were made.
-* If a user removes any of the forms fields without giving it a new value they will not be able to submit the changes. They will receive a message that tells them either ***"Please fill out this field"*** or  ***"Please select an item in the list"***. Once all fields of the form have been filled out the user can them submit the form.
-* Once the changes have been submitted the user will be redirected to the home page where they will receive a message stating ***"Your booking has been updated"***
-
-
-### Thank you Page:
-The user is redirected to a Thank you for Booking page once they have successfully made a booking. This is just a simple page with some text and two links.   
-Checks for this page: 
-* When a user clicks on the link to view, change or cancel their booking they are redirected to the 'My Bookings' page
-* When a user clicks on the link to view the menus they are redirected to the 'Menus' page
 
 ***
+
+
 
 ## Automated Test:
-Automated testing was done on the views.py file. This file was pick as it allowed testing of the views but also the CRUD functionality of the site.   
-To view the automated testing please go to [testing_views.py](/bookingsystem/test_views.py)
-For testing the view I created 10 automated tests. One to test each view and then to test the CRUD functionality. Each test passed when I ran the command in the terminal   
-![Testing](/static/images/testing_validation.png)
+Automated testing was attempted using the test.py file located in reservationsystem app. The goal was to test the functionality of using the main views of the reservation app. Adding a user, then adding, editing, and deleting a reservation by the created test user. 
+To view the automated testing attempt please go to [test.py](reservationsystem/test.py)
+For testing the view I created 6 automated tests. The main test point was to try and to test the CRUD functionality. 
+
+The main issue I encountered was "AssertionError: 200 != 302" for 3 of my test cases when I changed 200 (status ok code) for 302 (temporary redirect code) as recommended in the terminal feedback. All tests passed. Unfortunately, due time constraints I had to rely on manual testing (which I was going to do anyway) I intend to looking into this issue at a later date to understand why 302 is working and 200 (the code I hoped and expected to see).
+
+When I performed the automated tests I used the default sqllite database as recommended by the Code Institute Django walkthrough I Think I Blog project.
+
+![Automated Testing (200)](/static/images/testing/testing-200-error.jpg)
+
+!![Automated Testing (Fixed)](/static/images/testing/testing-200-fix.jpg)
 
 ***
 
-## User Feedback:  
-### Home page image:
-Original image on the home page did not give users the impression that they had landed on a restaurants website but more a cooking blog. After this feedback the homepage image was changed to make the site look like a restaurant website from the minute you land on it.  
 
-<details>
-<summary>Here is the original Home page image</summary>
-
-![Original Home Page Image](/static/images/bowl_of_fruit.jpg)
-</details><br>
-
-
-### Spacing on the pages:
-There was originally a white gap between the navigation bar and the main image on each page. After receiving user feedback that this looked like it wasn't meant to be there, it was removed from each page. The navigation bar and the main image now sit perfectly next to each other on each page. The white space still appears but only when a message is popping up.
-
-### Time out of message:
-When a user does just about anything on the site a message will appear to confirm their action. The time out on this was origianlly 2.5seconds. After receiving user feedback it was noted that these messages dissapear too quickly and were hard to read. The time out was increased to 4seconds to combat this. 
 
 [Back to Top of Testing](#manual-testing-of-non-dairy-godmother-website)     
 [Back to README](/README.md)

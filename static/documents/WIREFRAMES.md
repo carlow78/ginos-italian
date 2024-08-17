@@ -1,56 +1,41 @@
-# Non-dairy Godmother: 
+# Gino's Italian: 
 
-This page contains the Wireframes Non-dairy Godmother, a fictional vegan restaurant created for my forth milestone project with Code Institute.
+This page contains the Wireframes for Gino's Italian, a fictional Italian restaurant website created for my forth milestone project with the Code Institute.
 
-As you can see the finished project is slightly different from the original mockup. This changes were made for a number of reasons:
- 1. Design changes that were made throught out the project to enhance the user experience
- 1. Lack of knowledge for some feature and time restraints in both researching and implenting them
+The wireframe were created to provide a visual concept of the site and to share my project idea with my mentor for our first meeting. 
+
+Due to time constraints only 3 primary wireframes were created to depict the primary 3 elements of the website:
+
+1. Index
+2. Add Booking
+3. Manage Reservation(s)
 
 <details>
 <summary>Home Page</summary>
 
-![Home Page](/documents/images/wireframes/home_page.png)
+![Home Page](/static/images/wireframes/wireframe-index.jpg)
 </details>
 
 ***
 
 <details>
-<summary>Menu Page</summary>
+<summary>Add Booking</summary>
 
-![Menu Page](/documents/images/wireframes/menus.png)
+![Add Booking](/static/images/wireframes/wireframe-add-booking.jpg)
 </details>
 
 ***
 
-<details>
-<summary>Book A Table</summary>
+***
 
-![Book A Table](/documents/images/wireframes/booking_a_table.png)
+<details>
+<summary>Manage Reservation(s)</summary>
+
+![Manage Reservation(s)](/static/images/wireframes/wireframe-manage.jpg)
 </details>
 
 ***
 
-<details>
-<summary>Thank You Message</summary>
-
-![Thank You Message](/documents/images/wireframes/booking_confirmation.png)
-</details>
-
-***
-
-<details>
-<summary>Login Page</summary>
-
-![Login Page](/documents/images/wireframes/club_login.png)
-</details>
-
-***
-
-<details>
-<summary>Sign Up Page</summary>
-
-![Sign Up Page](/documents/images/wireframes/signup_page.png)
-</details>
 
 <br>
 
