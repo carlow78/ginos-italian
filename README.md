@@ -109,35 +109,16 @@ The information above was then used to create a structure for the website. Below
 
 
 ## Skeleton:
-[Wireframes](/documents/WIREFRAMES.md) were created to set out the initial appearance of the website while also making sure to keep the end-user in mind at all times. Wireframes were created using [Balsamiq](https://balsamiq.com/).  
+[Wireframes](/static/documents/WIREFRAMES.md) were created to set out the initial appearance of the website. The wireframes were created using [Balsamiq](https://balsamiq.com/).  
 
 ## Surface:
-[Please see the live site here](https://non-dairy-godmother.herokuapp.com/)  
+[Please see the live site here](https://ginos-italian-9732d83f0d42.herokuapp.com/)  
 
 ***
 [Back to top](#Non-dairy-Godmother)  
 
 ### Color: 
-For this website, I wanted to make it visually appealing and easy for people to read but also that it instantly came across as a 'Plant Power' website. As it is for a vegan restaurant I wanted the look to be clean and fresh. For this I picked green as my main color, using white as the contrasting color to make everything appear modern and clean.
-I wanted to make sure the color scheme was not only eye-catching but also that it passed the LightHouse Accessibility test. 
-
-To make sure text could be seen without issue on my chosen colors I used [Coolors](https://coolors.co/) color contrast checker.
-
-<details>
-<summary>Color Checker 1</summary>
-
-![Color Checker 1](/static/images/colour_checker1.png)
-</details>
-
-&nbsp;
-
-<details>
-<summary>Color Checker 2</summary>
-
-![Color Checker 2](/static/images/colour_checker2.png)
-</details>
-
-
+For this website, I wanted to make it visually appealing and easy for people to read being for a fictional italian restaurant, I decided to use green for the header, off-white and red for the footer. The 3 primary colors for the Italian flag. 
 
 ### Font:
 The font used for this project was Lora. This was imported from Google fonts and had a backup font of Sans Serif
