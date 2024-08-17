@@ -1,4 +1,4 @@
-# Gino's Italian: 
+# Ginos Italian: 
 
 This website is designed for a fictional Italian restaurant based in Carlow, Ireland. 
 
@@ -115,7 +115,7 @@ The information above was then used to create a structure for the website. Below
 [Please see the live site here](https://ginos-italian-9732d83f0d42.herokuapp.com/)  
 
 ***
-[Back to top](#Gino's-Italian)  
+[Back to top](#Ginos-Italian)  
 
 ### Color: 
 For this website, I wanted to make it visually appealing and easy for people to read being for a fictional italian restaurant, I decided to use green for the header, off-white for the main section and red for the footer. The 3 primary colors for the Italian flag. 
@@ -130,7 +130,7 @@ Imagery was sourced from [Pexel](https://www.pexels.com/).
 
 
 ***
-[Back to top](#Gino's-Italian)  
+[Back to top](#Ginos-Italian)  
 
 
 ## Features:
@@ -241,7 +241,7 @@ Some future features I would like for this app are:
 
 ***
 
-[Back to top](#Gino's-Italian)  
+[Back to top](#Ginos-Italian)  
 
 ## User Stories Met:
 This section is to look back at the User stories we established during the strategy phase of the project. 
@@ -349,7 +349,7 @@ Testing information can be viewed [here](/documents/TESTING.md)
 
 ***
 
-[Back to top](#Gino's-Italian) 
+[Back to top](#Ginos-Italian) 
 
 ## Technologies Used:
 For this project, the following technologies were used.  
@@ -395,7 +395,7 @@ For this project, the following technologies were used.
 
 *** 
 
-[Back to top](#Gino's-Italian)
+[Back to top](#Ginos-Italian)
 
 ## Validation:
 
@@ -414,7 +414,7 @@ For this project, the following technologies were used.
 
 ***
 
-[Back to top](#Gino's-Italian)
+[Back to top](#Ginos-Italian)
 
 ## Accessibility:
 ![LightHouse Report](/static/images/lighthouse_report.png)
@@ -437,4 +437,4 @@ Deployment information can be found [here](/documents/DEPLOYMENT.md)
 * I would like to thank the Slack community for all their support and encouragement during this and all my projects. 
 
 *** 
-[Back to top](#Gino's-Italian) 
+[Back to top](#Ginos-Italian) 
