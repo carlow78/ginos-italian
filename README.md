@@ -244,25 +244,23 @@ This section is to look back at the User stories established during the planning
 * As a new user, I want to book a table at thr restaurant   
 **Met on Add Booking Page**
 * As a new user, I want to pick the time, date and number of people for the booking      
-**Met on the Book form on the Book a Table page**
+**Met on the Booking form on Add Booking page**
 * As a new user, I want to be able to view menu  
-**Met on the Menus page, users can view three menus for the restaurant**
+**Met on the Menu page, users can view the main menu for the restaurant**
 * As a new user I want to be able to log in to edit or cancel my booking   
-**Met on the My Bookings page once the user is logged in**
-* As a new user, I want to be able to sign up for the restaurant's monthly newsletter  
-**Met on the Newsletter page**
+**Met on the Edit reservation page once the user is logged in**
+
 
 #### Returning User:
 * As a returning user, I want to log in to my account  
 **Met on the Log in page**
-* As a returning user, I want to book a table at Non-Dairy Godmother restaurant   
-**Met on the Book a Table Page**
+* As a returning user, I want to book a table at the restaurant   
+**Met on the Make a Reservation Page**
 * As a returning user, I want to view my bookings    
-**Met on the My Bookings page once the user is logged in**
+**Met on the Manage Booking page once the user is logged in**
 * As a returning user, I want to be able to edit or cancel my bookings   
-**Met on the My Bookings page once the user is logged in**
-* As a returning user, I want to see if the menus have been updated   
-**Met on the Menus page**
+**Met on the Edit resevation page once the user is logged in**
+
 
 ***
 

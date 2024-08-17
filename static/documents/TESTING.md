@@ -5,7 +5,6 @@
     1. [General](#General)
     1. [Navbar and Footer Links](#navbar-and-footer-links)
     1. [Menus Page](#menus-page)
-    1. [Newsletter](#newsletter)
     1. [Register](#register)
     1. [Login](#log-in)
     1. [Book A Table](#book-a-table)
@@ -22,38 +21,25 @@
 ## Manual Test:
 
 ### General:
-Using Google devtools I tested each page of the site to insure that it was responsive to different devices.
-One the website was deployed it was also tested on different browsers, i.e Google Chrome, Microsoft Edge, Mozilla Firefox and Safari. Testing was also performed on differnt operating systems, in particular Andriod and iOS.
+The website pages were tested using Google chrome devtools. To see how they functioned on various screen sizes. Testing was also performed on personal owned android(OnePlus Nord 3)and iPad 6 (2018) devices. With Bootstrap being installed this made writing less css code for smaller media screens - such as tablets and mobile. 
 
 ### Navbar and Footer Links: 
 On each page there is a navigation bar and a footer that needs to be tested, the following checks were made: 
-* By clicking on the resturant logo the home page was reloaded
+* By clicking on the resturant title the home page was displayed across all pages
 * By clicking on each of the tabs in the navbar you are redirected to the right page
-* All social media links worked correctly, opening the social network on a new tab
+* All social media links worked correctly, opening the social network website on a new tab
 
 ***
 
-### Menus page:
-On the menus page the user has the option to view the restaurant menus or download them. The checks for the menu page are as follows:
-* All the menu options, once clicked on, open up correctly and on a new tab
-* All "Download menu" options are working correctly 
+### Menu page:
+On the menu page the user can click on the "View our menu" which opens the menu for the restauranted hosted on Cloudinary. 
+* The menu link, once clicked on, opens up correctly and on a new tab
 
-
-### Newsletter: 
-During the testing of the Newsletter page it was discovered that the form could be submitted without any information on it. This needed to be addresssed before deploying of the project.
-
-*(Please refer to the Bugs section of the [README](/README.md) for more information)*
-
-Once this issue was sorted testing of the Newsletter form was able to continue. The checks were as follows:
-* Click on the 'Submit' button without entering any details, this will cause an error message to appear staing ***"Please fill out this field"***. This message will appear each time the user tries to submit the form without filling out any of the fields in the form. 
-* Once the user has filled out all the fields in the form and clicked on the submit button they will be directed back to the home page where a message will pop up "Thank you for signing up to our newsletter"
-
-
-### Register:
-Like the Newsletter page, the Register page has a form for the user to fill out however, in this form not all fields are required. 
-* The first test on the Register page was to check if the link to the "Log In" page at the top of the form works. Clicking on this link will bring the user straight to the Login Page. 
+### Register (Sign Up):
+The Register page has a form for the user to fill out.
+* The first test on the Register page was to check if the link to the "Register" page at the top of the form works. Clicking on this link will bring the user straight to the Login Page. 
 * Click on the 'Submit' button without entering any details, this will cause an error message to appear staing ***"Please fill out this field"***. This message will appear each time the user tries to submit the form without filling in the required fields. 
-* If the user tried to create a password that is too easy or too common they will not be able to proceed and will get all or some of the following messages: 
+* If the user tried to create a password that is too easy or similar to username/email or too common they will not be able to proceed and will get all or some of the following messages: 
     * This password is too short. 
     * It must contain at least 8 characters.
     * This password is too common.
@@ -70,20 +56,20 @@ The Log in page is a simple test, there was just two elements on the page that n
 * Clicking on the 'Log In' button redirects the user back to the home page.
 
 
-### Book A Table:
-When a user moves to the Book A Table page they will be met with a form with 8 elements on it
+### Make a Reservation:
+
+Contains 6 elements on it
 1. Booking Name
 1. Email Address
 1. Contact Number
 1. Number of People
 1. Date
 1. Time
-1. Table
-1. Occasion 
+1. Additional comments
 
 These elements need to be filled out before the user can make a booking, the checks for this page are as follows:
 * Try clicking on the 'Submit' button without entering any details in the log in form, this will cause an error message to appear staing ***"Please fill out this field"***. This message will appear each time the user tries to submit the form without filling out any of the fields in the form. 
-* Selecting a date is done using the calender widget. Click on the calendar icon on the right and select a date.
+* Selecting a date is done using the calender widget. Click on the calendar icon on the right and select a date. If the user chooses past date they will receive an error message - "The reservation date cannot be in the past."
 * Number of People, Time, Table and Occasion are all selected using the dropdown menu, this is done but clicking on the arrow and choosing the option that best suits the booking. If the user attempts to make a booking without making one of these choices they will recieved the following message ***"Please select an item in the list"***
 
 
