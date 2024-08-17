@@ -236,18 +236,16 @@ Some future features I would like for this app are:
 [Back to top](#Ginos-Italian)  
 
 ## User Stories Met:
-This section is to look back at the User stories we established during the strategy phase of the project. 
-We are looking to see if we have met all the goals we set out. 
+This section is to look back at the User stories established during the planning of the project
+ 
 #### New User: 
-* As a new user, I want to register so I can make a booking   
-**Met on the Book a Table Page**
-* As a new user, I want to book a table at Non-Dairy Godmother restaurant   
-**Met on the Book a Table Page**
-* As a new user, I want to pick the time, date and number of people for the booking   
+* As a new user, I want to register so I can make a reservation 
+**Met on the Make a Reservation Page**
+* As a new user, I want to book a table at thr restaurant   
+**Met on Add Booking Page**
+* As a new user, I want to pick the time, date and number of people for the booking      
 **Met on the Book form on the Book a Table page**
-* As a new user, I also want the option to pick the occasion and area I would like to site   
-**Met on the Book form on the Book a Table page**
-* As a new user, I want to be able to view menus  
+* As a new user, I want to be able to view menu  
 **Met on the Menus page, users can view three menus for the restaurant**
 * As a new user I want to be able to log in to edit or cancel my booking   
 **Met on the My Bookings page once the user is logged in**
