@@ -20,7 +20,7 @@
                 </div>
                 <a href="{% url 'bookings:edit_reservation' booking.id %}" class="btn btn-success">Edit Reservation</a>
                 <br>
-                <a href="{% url 'bookings:delete_reservation' booking.id %}" class="btn btn-success">Delete Reservation</a>
+                <a href="{% url 'bookings:delete_reservation' booking.id %}" class="btn btn-danger">Delete Reservation</a>
             </div>
         </div>
         {% endfor %}

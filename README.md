@@ -1,4 +1,4 @@
-# Gino's Italian: 
+# Ginos Italian: 
 
 This website is designed for a fictional Italian restaurant based in Carlow, Ireland. 
 
@@ -118,19 +118,19 @@ The information above was then used to create a structure for the website. Below
 [Back to top](#Non-dairy-Godmother)  
 
 ### Color: 
-For this website, I wanted to make it visually appealing and easy for people to read being for a fictional italian restaurant, I decided to use green for the header, off-white and red for the footer. The 3 primary colors for the Italian flag. 
+For this website, I wanted to make it visually appealing and easy for people to read being for a fictional italian restaurant, I decided to use green for the header, off-white for the main section and red for the footer. The 3 primary colors for the Italian flag. 
 
 ### Font:
-The font used for this project was Lora. This was imported from Google fonts and had a backup font of Sans Serif
- 
+For the fonts I imported 2 Google Fonts to my CSS for the title and headers "Playwrite CU", with a backup of sans-serif and for the main-font: "Nanum Gothic" with a back of sans-serif.
 
+ 
 ### Images:
 
-A lot of the imagery on this site was sourced from [Pexel](https://www.pexels.com/).  
+Imagery was sourced from [Pexel](https://www.pexels.com/).  
 
 
 ***
-[Back to top](#Non-dairy-Godmother)  
+[Back to top](#Ginos-Italian)  
 
 
 ## Features:

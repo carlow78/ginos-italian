@@ -6,6 +6,8 @@ from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.urls import reverse_lazy
 from .models import ReservationSystem
 from .forms import BookingForm
+from django.http import JsonResponse
+
 
 
 class Home(generic.DetailView):
@@ -115,7 +117,7 @@ class DeleteBooking(LoginRequiredMixin, DeleteView):
     """
     Allows the logged-in user to delete their reservation(s).
     Using the booking_id as the primary key.
-    After deletion, the user is redirected to their list of reservations.
+    After deletion, the user is redirected back to the home page.
     """
 
     def get_object(self, pk):
@@ -133,6 +135,3 @@ class DeleteBooking(LoginRequiredMixin, DeleteView):
         """Render a confirmation page before deletion."""
         booking = self.get_object(pk)
         return render(request, 'bookings/delete_reservation.html', {'booking': booking})
-    
-
-       
