@@ -134,61 +134,60 @@ Imagery was sourced from [Pexel](https://www.pexels.com/).
 
 
 ## Features:
-There are several features on this site to help users get the most out of their visit to the site.  
+The website consists of the following features: 
 
 ### General:
 
 <details>
-<summary>Header and Nav Bar:</summary>
+<summary>Header and Nav Bar: New User & Logged In User</summary>
 
-![Header and Nav Bar](/static/images/header_nav.png)
+![Header and Nav Bar - New User](/static//images/readme/ginos-header.jpg)
+![Header and Nav Bar - Logged User](/static//images/readme/ginos-header-logged-in.jpg)
 </details>
 Each page has a Header and Navigation bar section, located at the top of the page. 
-The navigation bar consisted of links to a Book A Table page, a Newsletter page, a Login page, a Register page and for authorised users a My Bookings, as well as a Home button that brings the user back to the landing page. The landing page can also be reached by clicking on the restaurant logo.
+The navigation bar consisted of links to a Make a Reservation page, a Login page, a Register page and for authorised users a Manage Bookings, as well as a Home button that brings the user back to the index page. The landing page can also be reached by clicking on the restaurant title in the top left corner.
 
 &nbsp;
 
 <details>
 <summary>Footer Information:</summary>
 
-![Opening Hours & Social Media](/static/images/footer.png)
+![Opening Hours & Social Media](/static/images/readme/gino-footer.jpg)
 </details> 
-Each page also contains a footer element that consists of the restaurant's social media accounts (Facebook, Twitter and Instagram), as well as the opening hours for the restaurant and copyright information. 
+Each page contains a footer section which contains a About Us paragraph, a Contact Us section with details about to get in touch with the restaurant and finally a Social Media with links to the restaurant social media sources.
 
 &nbsp;
 
 ### Home page:
-The *Home* page contains the header and footer as mentioned above 
+The *Home* page contains the header and footer as mentioned above. 
 
 <details>
 <summary>Main Area:</summary>
 
-![Main Area of Home Page](/static/images/main_area.png)
+![Main Area of Home Page](/static/images/readme/ginos-main-area.jpg)
 </details>
-The main focus on the *Home* page is the hero image, this is an image of the restaurant with a green overlay welcoming site visitors to the website. 
+The main focus on the *Home* page is the hero image, this is an image of fresh Italian food ingredients.
 
-&nbsp;
 
-### Menus Page:
+### Menu Page:
 The next page on the site is the *Menu* page. This has all the header and footer features mentioned above.
 
 <details>
-<summary>Menu Options:</summary>
+<summary>Menu Option:</summary>
 
-![Menus](/static/images/menus.png)
+![Menu](/static/images/readme/ginos-menu.jpg)
 </details>
-A visitor to the site can view the three menus available at the restaurant, that is, a Lunch Menu, a Dinner Menu and a Cocktails Menu. 
-Each menu can be viewed by clicking on the menu name or can be downloaded for viewing at a later point. 
+This page is very simplistic it contains a image of plate of pasta in the background and a "View our menu" link to the restaurants specials menu. The menu was created using a <i>Canva</i> free template.
 
 &nbsp;
 
-### Book A Table Page:
-Next up is the *Book A Table* page. Which has all the previously mentioned header and footer features. 
+### Make a Reservation Page:
+Next there is the *Make a Reservation* page. Which has all the previously mentioned header and footer features. 
 
 <details>
 <summary>Booking Form:</summary>
 
-![Menus](/static/images/book_a_table.png)
+![Menus](/static/images/readme/ginos-add-reservation.jpg)
 </details> 
 Once a user has either logged into their account or created an account they will be able to view the booking form. 
 
@@ -197,48 +196,41 @@ Once a user has either logged into their account or created an account they will
 <details>
 <summary>Date Picker:</summary>
 
-![Menus](/static/images/date_picker.jpg)
+![Date-Picker](/static/images/readme/gino-date-picker.jpg)
 </details>
-On the booking form, the user has the option to pick the date they would like to make the bookings. This can be done by either typing the date in the date section or by clicking on the little calendar in the corner of the box and popping out the date picker. 
+On the booking form, the user has the option to pick the date they would like to make the bookings. This can be done by either typing the date in the date section or by clicking on the little calendar in the corner of the box and popping out the date picker calendar. They will receive a red error message if they try and book a date in the past.
 
 &nbsp;
 
-<details>
-<summary>Time Picker:</summary>
+<b>Number of People and Time Dropdowns:</b>
 
-![Menus](/static/images/time_picker.jpg)
-</details>
-On the booking form, the user has the option to pick the time they would like to make the bookings. This is done by clicking on the dropdown menu of times and clicking on the time the user wishes to make the booking. 
+The booking form features two drop-down menu. A Number of people and Time drop-down menu. Number of people (options 1 to 8) Time (options 12:00pm to 9:00pm) the times the restaurant is opened.
 
 &nbsp;
 
-<details>
-<summary>Location Picker:</summary>
+<b>Text fields (Booking Name, Telephone Number, and Additional Comments):</b>
 
-![Menus](/static/images/location_picker.jpg)
-</details>
-On the booking form, the user also has the option to pick where in the restaurant they would ideally like to sit. This is done by clicking on the dropdown menu of locations and clicking on the user's peferred location. 
+<u>1. Booking Name</u>
 
-&nbsp;
+This is required field and must be filled in.
 
-<details>
-<summary>Occasion Picker:</summary>
 
-![Menus](/static/images/occasion_picker.jpg)
-</details>
-The user also has the option to provide the restaurant with a reason for making the booking, be it a birthday, night out with friends or no particular reason at all. This can be done by clicking on the dropdown menu and picking which occasion best suits the booking.    
+<u>2. Telephone Number</u>
 
-&nbsp;
+This is required field and must only contain digits. The minimum digits required are 10 and maximum of 15 digits.
+
+<u>3. Additional Comments</u>
+
+This is not a required field. Its purpose is the user wants to ask further questions.
+
+
 
 ## Future Features:
 Some future features I would like for this app are:
 * Automated confirmation emails - that will be sent out to a user when they have made, edited or cancelled a booking
 * Avoid overbookings - a backend feature that filters through all the bookings at a certain time and makes sure that the number of bookings does not exceed the number of available seats
-* Dinner Club Login - where members can see the special offers that are only for members
-* A Review page - this is a page where users can view reviews from previous diners but can also leave their reviews on the restaurant
-* Gallery page - which would be linked to the restaurant's Instagram account 
-* A shop - where users can buy vouchers, in-house wines, oils, dressings, etc
-
+* A Review page - this is a page where users can view reviews from previous patrons and can also leave their reviews on the restaurant
+* A ordering page where users can order food from the restaurant
 ***
 
 [Back to top](#Ginos-Italian)  
