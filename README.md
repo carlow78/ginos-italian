@@ -265,7 +265,7 @@ This section is to look back at the User stories established during the planning
 ***
 
 ## Testing:
-Testing information can be viewed [here](/documents/TESTING.md)
+Testing information can be viewed [here](/static/documents/TESTING.md)
 
 ***
 
