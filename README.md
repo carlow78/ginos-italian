@@ -271,27 +271,28 @@ Testing information can be viewed [here](/static/documents/TESTING.md)
 
 ## Bugs:
 
-1. The styling of the edit resercation page was not consistent with the other pages. 
-      * I had forgotten to include "{% load static %}" at the beginning of my html page once this was added, the page loaded correctly. 
-<details>
+<u>Heroku Gunicorn install error:</u>
 
+When I first tried to deploy the website to Heroku it was failing after using <i>web: gunicorn reservationsystem.wsgi</i>
 
+Gunicorn install issue thankfully a post in Slack resolved the issue. My settings.py was located in the main folder. 
 
-![Admin Page Error](/static/images/admin_page_error.png)
-</details>
+![Gunicorn Issue](/static/images/readme/gunicorn-fix.png) 
 
-1. CSS was not appearing when the site was deployed.
-      * When I delpoyed the site to Heroku, the site would be built but the CSS was not appearing.
-      * This was something that I could not figure out as I had changed DEBUG to False and removed DISABLE COLLECTSTATIC from the config var (as per the CI vidoes)
-      * I contacted the CI tutors who were able to walk me through what I needed to do: 
-            * Set the DISABLE COLLECTSTAIC again in Heroku
-            * Set the DEBUG back to True and commit the changes
-            * Delete all files from my Cloudinary account
-            * I then had to change the DEBUG back to FALSE before removing DISABLE COLLECTSTATIC from the config vars and commit and push the changes. 
-            * This then allowed Heroku to Collectstatic and added all the static files to Cloudinary
-      * All the CSS then worked perfectly on the site 
+<u>CSS not appearing in Heroku</u>
 
-1. During the testing stage, it was discovered that both the Newsletter form and the Book a Table form had elements of it that were not showing up as being a required field. After a quick search, I found that I needed to provide each field with a handle that checks if the field is required. I also added labels for each of these required fields, along with placeholders.  
+When I deployed the site to Heroku, no CSS was appearing and in Devtools a 404 not found was appearing for the base.css file.
+      
+
+After googling the issue I found the solution from this 
+[Stack Overflow post](https://stackoverflow.com/questions/28961177/heroku-static-files-not-loading-django)  and then remembered I had run the code previously during the I Think I Blog walkthrough project.
+
+Once I ran a <b>python manage.py collectstatic</b> committed my changes and attempted a redeploy all the CSS then worked perfectly on the site.
+
+<u>Booking ID Primary Key Issue - Unresolved Bug</u>
+
+During my final 3rd Mentor 1to1 with my Mentor Precious. He pointed out that edit/ or delete (bookingID) ideally should not be appearing for a user in the URL as a security concern and bad UX. I did try experimenting to try to resolve the issue but time was against me after illness. Its something I hope to resolve in the future and to deploy my project sooner for my mentor to review. 
+
 
 ***
 
@@ -333,11 +334,14 @@ For this project, the following technologies were used:
 #### Balsamiq 
 * Balsamiq was used to draw initial Wireframes for this project.
 
-#### 
-* Figma was used during the structure phase of this project. It was used to create a sitemap of the website. 
+#### Gloomap
+* Gloomap was used to create a sitemap of the website. 
 
 #### Google Development Tools
-* Google Dev Tools was used to edit code and check responsiveness before making the changes permanent.
+* Google Dev Tools was used to edit code and check responsiveness
+
+### Windows Photo Editor and Convertio.io
+* Windows Photo Editor was used to save Pexel *.PNG files as *.JPG afterwards each file was converted to *.WEBP using Convertio.io online conversion tool. Images were then uploaded to Cloudinary.
 
 *** 
 
@@ -347,13 +351,13 @@ For this project, the following technologies were used:
 
 * HTML:
       - No errors were found when passed through the [W3C Validator tool](https://validator.w3.org/#validate_by_input)
-      - To view screenshots of validations please click [here](/documents/VALIDATION.md)
+      - To view screenshots of validations please click [here](/static/documents/VALIDATION.md)
 
 * CSS:
       - No errors were found when passed through the [W3C Validator tool](https://jigsaw.w3.org/css-validator/validator) 
 
 * JavaScript: 
-      - No costume Javascript was used in this project. The Javascript included at the end of my base.html was taken from the Code Institutes walkthrough project. 
+      - Very little Javascript was used in this project. Apart from the autohide messages added at the bottom of base.html. This code was passed using [JShint](https://jshint.com/.)
 
 * Python: 
       - No errors were found when passed through [PEP8 Validator](http://pep8online.com/)
@@ -363,24 +367,25 @@ For this project, the following technologies were used:
 [Back to top](#Ginos-Italian)
 
 ## Accessibility:
-![LightHouse Report](/static/images/lighthouse_report.png)
+![LightHouse Report (Index)](/static/images/readme/lighthouse-index.jpg)
+![Lighthouse Report (Menu)](/static/images/readme/lighthouse-menu.jpg)
 
 ***
 
 ## Deployment:
 Deployment information can be found [here](/documents/DEPLOYMENT.md)
 
-***
+
 
 ## Credits:
-* The initial setup of the Django project was done following the Code Institutes walkthrough project.  
+The initial setup of the Django project was done following Code Institute's Alumi now Mentor - Daisy McGirr (Slack @Daisy Mc) [Youtube](https://www.youtube.com/watch?v=sBjbty691eI&list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy) Recipe Sharing Django Project series.  Thanks to Slack @Amy_CI for sharing.
+
+And to CI past student Martina Martin (Martiless) for her [Non-Dairy Godmother PP4 project](https://github.com/Martiless/nondairy-godmother) which made developing my project a lot easier due to the similarities of our projects and for the [Readme](https://github.com/Martiless/nondairy-godmother/blob/main/README.md) and testing templates.
 
 
 ## Acknowledgements:
-* I would like to thank Brian O’Hare for being my mentor for this project.
-* I would like to thank Ed from tutor support.
-* I would like to thank Ger from tutor support.
-* I would like to thank the Slack community for all their support and encouragement during this and all my projects. 
+* I would like to thank Precious Ijege for being my mentor for this project.
+* I would like to thank the Slack, Stack Overflow community.
 
 *** 
 [Back to top](#Ginos-Italian) 

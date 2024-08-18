@@ -24,6 +24,9 @@ Remaining HTML files were not tested for the following reason small size i.e Del
 
 ***
 
+## CSS Validation
+![CSS Validation](/static/images/validation/validation-css.jpg)
+
 ## Python Validation: 
 
 ### Model: 
@@ -40,5 +43,7 @@ Remaining HTML files were not tested for the following reason small size i.e Del
 ![Views Validation](/static/images/validation/validation-view-py.jpg)
 ***
 
+### JavaScript Validation
+![JavaScript Validation](/static/images/validation/validation-js.jpg)
 
 Back to [README](/README.md)

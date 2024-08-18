@@ -282,8 +282,7 @@ a.nav-link {
     padding: 3rem;
     border-radius: 8px;
     transition: transform 0.2s;
-    box-shadow: 0 4px 8px rgba(--offwhite);
-    transition: transform 0.2s;
+    box-shadow: 0 4px 8px var(--offwhite);
     margin-left: 4rem; 
     
 }
