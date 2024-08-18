@@ -2,7 +2,7 @@
 
 ## HTML Validation:
 
-The following were validated once content was inserted into s emmet boiler HTML template.
+The following were validated once content was inserted into an emmet boiler HTML template.
 
 ### Home page: 
 

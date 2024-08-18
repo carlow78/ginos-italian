@@ -241,7 +241,7 @@ This section is to look back at the User stories established during the planning
 #### New User: 
 * As a new user, I want to register so I can make a reservation 
 **Met on the Make a Reservation Page**
-* As a new user, I want to book a table at thr restaurant   
+* As a new user, I want to book a table at the restaurant   
 **Met on Add Booking Page**
 * As a new user, I want to pick the time, date and number of people for the booking      
 **Met on the Booking form on Add Booking page**
@@ -373,7 +373,7 @@ For this project, the following technologies were used:
 ***
 
 ## Deployment:
-Deployment information can be found [here](/documents/DEPLOYMENT.md)
+Deployment information can be found [here](/static/documents/DEPLOYMENT.md)
 
 
 
