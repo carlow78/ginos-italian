@@ -1,6 +1,6 @@
 ## Deployment: 
 
-<u>PREREQUISITES</u> Before Deploying to Heroku please remember to run <b>python manage.py collectstatic</b> in Gitpod and commit to Gitub. As I discovered it is required to copy CSS and all static folder content images etc to Heroku.
+<u>PREREQUISITES</u> Before Deploying to Heroku please remember to run <b>python manage.py collectstatic</b> in Gitpod and commit to Github. As I discovered it is required to copy CSS and all static folder content images etc to Heroku.
 
 <u>DEBUG=False</u> should always be set in produciton environment.
 
